@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "217028501544",
+    "firebase_url": "https://azzorti-app-ecuador.firebaseio.com",
+    "project_id": "azzorti-app-ecuador",
+    "storage_bucket": "azzorti-app-ecuador.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217028501544:android:57788e07657e2b61f8d51d",
+        "android_client_info": {
+          "package_name": "com.dupreincaecuador.dupree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217028501544-1ak9tqdlsrlbellorsh2uspi0ig0v2j9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dupreincaecuador.dupree",
+            "certificate_hash": "29fe32d0153534dfa18c9c783c55601ff40b10a7"
+          }
+        },
+        {
+          "client_id": "217028501544-kl6dqa5vpthmd1nqr1grsbsptce654lj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt1U-Z-S6PDw1JiIYSn1CYdj6lGgcujAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "217028501544-kl6dqa5vpthmd1nqr1grsbsptce654lj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

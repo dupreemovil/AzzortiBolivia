@@ -1,0 +1,52 @@
+{
+  "tipo_via": [
+    {
+      "id": 0,
+      "name": "Avenida"
+    },
+    {
+      "id": 1,
+      "name": "Calle"
+    },
+    {
+      "id": 2,
+      "name": "Carrera"
+    },
+    {
+      "id": 3,
+      "name": "Casa"
+    },
+    {
+      "id": 4,
+      "name": "Circular"
+    },
+    {
+      "id": 5,
+      "name": "Diagonal"
+    },
+    {
+      "id": 6,
+      "name": "Kilometro"
+    },
+    {
+      "id": 7,
+      "name": "Lote"
+    },
+    {
+      "id": 8,
+      "name": "Manzana"
+    },
+    {
+      "id": 9,
+      "name": "Sector"
+    },
+    {
+      "id": 10,
+      "name": "Transversal"
+    },
+    {
+      "id": 11,
+      "name": "Otro"
+    }
+  ]
+}

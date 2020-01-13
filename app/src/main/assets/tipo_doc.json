@@ -1,0 +1,16 @@
+{
+  "tipo_doc": [
+    {
+      "id": 0,
+      "name": "Cédula"
+    },
+    {
+      "id": 1,
+      "name": "Doc. Extranjería"
+    },
+    {
+      "id": 2,
+      "name": "Nit"
+    }
+  ]
+}
