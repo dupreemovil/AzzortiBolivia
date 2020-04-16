@@ -243,5 +243,7 @@
     <orderEntry type="library" name="Gradle: com.github.lecho:hellocharts-library:1.5.8@aar" level="project" />
     <orderEntry type="module" module-name="lib_api_rest" />
     <orderEntry type="module" module-name="lib_image" />
+    <orderEntry type="module" module-name="lib_api_rest" />
+    <orderEntry type="module" module-name="lib_image" />
   </component>
 </module>

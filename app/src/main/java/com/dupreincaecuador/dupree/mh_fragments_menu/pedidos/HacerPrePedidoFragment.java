@@ -1,6 +1,7 @@
 package com.dupreincaecuador.dupree.mh_fragments_menu.pedidos;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -33,6 +34,7 @@ import com.dupreeinca.lib_api_rest.model.dto.response.realm.Catalogo;
 import com.dupreeinca.lib_api_rest.model.dto.response.realm.ItemCarrito;
 import com.dupreeinca.lib_api_rest.model.view.Profile;
 import com.dupreeinca.lib_api_rest.util.models.ModelList;
+import com.dupreincaecuador.dupree.FullscreenActivity;
 import com.dupreincaecuador.dupree.R;
 import com.dupreincaecuador.dupree.databinding.FragmentPrePedidosHacerBinding;
 import com.dupreincaecuador.dupree.mh_adapters.CatalogoListAdapter;
@@ -410,11 +412,11 @@ public class HacerPrePedidoFragment extends TabManagerFragment implements BasePe
                 dataStore.setCampanaActual(campanaActualServer);// se respalda la campañ actual
                 dataStore.setChangeCampana(true);
 
-                /*Intent intent = new Intent(getActivity(), FullscreenActivity.class);
+                Intent intent = new Intent(getActivity(), FullscreenActivity.class);
                 intent.putExtra("campanaActual", campanaActualServer);
                 startActivity(intent);
-                getActivity().finish();*/
-                showProgress();
+                getActivity().finish();
+               // showProgress();
                 return;
             }
             selectAction();
