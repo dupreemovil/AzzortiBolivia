@@ -97,10 +97,10 @@
                     android:icon="@drawable/ic_local_offer_white_24dp"
                     android:title="@string/consulta_de_puntos" />
                 <!--SOLO ASESORA//////////////////////////////////////////////-->
-                <item
+                <!--<item
                     android:id="@+id/menu_lat_redimir_incentivos"
                     android:icon="@drawable/ic_loyalty_white_24dp"
-                    android:title="@string/redimir_incentivos" />
+                    android:title="@string/redimir_incentivos" />-->
                 <!--SOLO ASESORA//////////////////////////////////////////////-->
                 <item
                     android:id="@+id/menu_lat_incent_por_referido"
@@ -151,10 +151,10 @@
                     android:id="@+id/menu_lat_pet_quej_rec_pqr"
                     android:icon="@drawable/ic_record_voice_over_white_24dp"
                     android:title="@string/peticiones_quejas_y_reclamos_pqr" />
-                <item
+                <!--<item
                     android:id="@+id/menu_lat_pagos_linea"
                     android:icon="@drawable/ic_credit_card_white_24dp"
-                    android:title="@string/pagos_en_l_nea" />
+                    android:title="@string/pagos_en_l_nea" />-->
             </menu>
         </item>
         <!--SOLO ASESORA//////////////////////////////////////////////-->

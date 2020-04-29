@@ -5,7 +5,7 @@ package com.dupreeinca.lib_api_rest.model.base;
  */
 
 public interface Api {
-    String API_URL = "https://alcor.dupree.pe/dupreeWS/";
+    String API_URL = "https://alcor.azzorti.com/azzortiWS/";
     //String API_URL = "https://alcor2col.azzorti.co/dupreeWS/";
     /**
      * Manufacturer API

@@ -47,19 +47,19 @@ public class PanelGteHolder extends RecyclerView.ViewHolder{
             // ***************PRIMA LINEA***************************************
             values = new ArrayList<PointValue>();
             if(!item.getValo_camp1().trim().isEmpty() && item.getValo_camp1() != null && item.getValo_camp1() != "NAN"){
-                values.add(new PointValue(0, Integer.parseInt(item.getValo_camp1())));
+                values.add(new PointValue(0, Float.parseFloat(item.getValo_camp1())));
             }else{
                 values.add(new PointValue(0, 0));
             }
 
             if(!item.getValo_camp2().trim().isEmpty() && item.getValo_camp2() != null && item.getValo_camp2() != "NAN"){
-                values.add(new PointValue(1, Integer.parseInt(item.getValo_camp2())));
+                values.add(new PointValue(1, Float.parseFloat(item.getValo_camp2())));
             }else{
                 values.add(new PointValue(1, 0));
             }
 
             if(!item.getValo_camp3().trim().isEmpty() && item.getValo_camp3() != null && item.getValo_camp3() != "NAN"){
-                values.add(new PointValue(2, Integer.parseInt(item.getValo_camp3())));
+                values.add(new PointValue(2, Float.parseFloat(item.getValo_camp3())));
             }else{
                 values.add(new PointValue(2, 0));
             }
@@ -77,19 +77,19 @@ public class PanelGteHolder extends RecyclerView.ViewHolder{
             // SEGUNDA LINEA
             values = new ArrayList<PointValue>();
             if(!item.getValo_meta1().trim().isEmpty() && item.getValo_meta1() != null && item.getValo_meta1() != "NAN"){
-                values.add(new PointValue(0, Integer.parseInt(item.getValo_meta1())));
+                values.add(new PointValue(0, Float.parseFloat(item.getValo_meta1())));
             }else{
                 values.add(new PointValue(0, 0));
             }
 
             if(!item.getValo_meta2().trim().isEmpty() && item.getValo_meta2() != null && item.getValo_meta2() != "NAN"){
-                values.add(new PointValue(1, Integer.parseInt(item.getValo_meta2())));
+                values.add(new PointValue(1, Float.parseFloat(item.getValo_meta2())));
             }else{
                 values.add(new PointValue(1, 0));
             }
 
             if(!item.getValo_meta3().trim().isEmpty() && item.getValo_meta3() != null && item.getValo_meta3() != "NAN"){
-                values.add(new PointValue(2, Integer.parseInt(item.getValo_meta3())));
+                values.add(new PointValue(2, Float.parseFloat(item.getValo_meta3())));
             }else{
                 values.add(new PointValue(2, 0));
             }

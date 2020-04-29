@@ -133,7 +133,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 navigationView.getMenu().findItem(R.id.menu_lat_home_gerentes).setVisible(false);
                 navigationView.getMenu().findItem(R.id.posibles_asesoras).setVisible(false);
                 navigationView.getMenu().findItem(R.id.incorporaciones).setVisible(false);
-                navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(true);
+                //navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(true);
 //                navigationView.getMenu().findItem(R.id.menu_lat_cupo_saldo_conf).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_pedidos_ret).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_edo_pedido).setVisible(false);
@@ -141,13 +141,15 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 navigationView.getMenu().findItem(R.id.servicios).setVisible(true);
 
                onNavigationItemSelected(navigationView.getMenu().findItem(R.id.menu_lat_home_asesoras));
+
+                 navigationView.getMenu().findItem(R.id.menu_lat_reporte_ubicacion).setVisible(false);
                 break;
             case Profile.TRASNPORTISTA:
                 navigationView.getMenu().findItem(R.id.menu_lat_home_asesoras).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_home_gerentes).setVisible(false);
                 navigationView.getMenu().findItem(R.id.posibles_asesoras).setVisible(false);
                 navigationView.getMenu().findItem(R.id.incorporaciones).setVisible(false);
-                navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(false);
+                //navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(false);
 //                navigationView.getMenu().findItem(R.id.menu_lat_cupo_saldo_conf).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_pedidos_ret).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_edo_pedido).setVisible(false);
@@ -160,12 +162,12 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 navigationView.getMenu().findItem(R.id.menu_lat_faltantes).setVisible(false);
 
                 navigationView.getMenu().findItem(R.id.menu_lat_consulta_puntos).setVisible(false);
-                navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(false);
+                //navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_incent_por_referido).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_reportes).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_pedidos_ret).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_pet_quej_rec_pqr).setVisible(false);
-                navigationView.getMenu().findItem(R.id.menu_lat_pagos_linea).setVisible(false);
+                //navigationView.getMenu().findItem(R.id.menu_lat_pagos_linea).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_update).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_share).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_modif_perfil).setVisible(false);
@@ -173,10 +175,10 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
 
 
                 navigationView.getMenu().findItem(R.id.menu_lat_logout).setVisible(true);
-                navigationView.getMenu().findItem(R.id.menu_lat_reporte_ubicacion).setVisible(true);
+               // navigationView.getMenu().findItem(R.id.menu_lat_reporte_ubicacion).setVisible(true);
 
 
-                onNavigationItemSelected(navigationView.getMenu().findItem(R.id.menu_lat_reporte_ubicacion));
+               // onNavigationItemSelected(navigationView.getMenu().findItem(R.id.menu_lat_reporte_ubicacion));
                 break;
             case Profile.LIDER:
             case Profile.GERENTE_ZONA:
@@ -184,7 +186,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 navigationView.getMenu().findItem(R.id.menu_lat_home_asesoras).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_home_gerentes).setVisible(true);
                 navigationView.getMenu().findItem(R.id.incorporaciones).setVisible(true);
-                navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(false);
+                //navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(false);
 //                navigationView.getMenu().findItem(R.id.menu_lat_cupo_saldo_conf).setVisible(true);
                 navigationView.getMenu().findItem(R.id.menu_lat_pedidos_ret).setVisible(true);
 
@@ -295,9 +297,9 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 ((IncentivosConsultaPtosFragment) fragmentoGenerico).loadData(perfil);
                 break;
             //LISTO PARA PRUEBAS ( SOLO ASESORAS )
-            case R.id.menu_lat_redimir_incentivos:
+            /*case R.id.menu_lat_redimir_incentivos:
                 fragmentoGenerico = new IncentivosRedimirFragment();
-                break;
+                break;*/
             //LISTO PARA PRUEBAS ( TODOS - GERENTE BUSCAR ASESORA )
             case R.id.menu_lat_incent_por_referido:
                 fragmentoGenerico = new IncentivosReferidoFragment();
@@ -318,10 +320,10 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 //fragmentoGenerico = new Servicios_PetQueRec_Fragment();// es el mismo del menu ppal
                 fragmentoGenerico = new ContactFragment();
                 break;
-            case R.id.menu_lat_pagos_linea:
+            /*case R.id.menu_lat_pagos_linea:
                 //LISTO PARA PRUEBAS ( NO ESTA DEFINIDO )
                 fragmentoGenerico = new Servicios_PagosOnLine_Fragment();
-                break;
+                break;*/
             case R.id.menu_lat_share:
                 //LISTO PARA PRUEBAS ( COMPARTIR APP )
                 testShare();

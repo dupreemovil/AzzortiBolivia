@@ -1,5 +1,5 @@
 <resources>
-    <string name="api_url">https://alcor.dupree.pe/dupreeWS/</string>
+    <string name="api_url">https://alcor.azzorti.com/azzortiWS/</string>
     <!--<string name="api_url">https://alcor2col.azzorti.co/dupreeWS/</string>-->
     <string name="app_name">Azzorti</string>
     <string name="title_home">Home</string>
@@ -60,7 +60,7 @@
     <string-array name="typeIdenty">
         <item>Cédula</item>
         <item>Doc. Extranjería</item>
-        <item>Nit</item>
+        <item>Ruc</item>
     </string-array>
 
     <string-array name="parentescoOptions">
