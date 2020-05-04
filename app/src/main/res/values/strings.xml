@@ -271,9 +271,9 @@
     <string name="bis">Bis</string>
     <string name="sur_este">Sur - Este</string>
     <string name="datos_adicionales">Datos adicionales</string>
-    <string name="departamento">Departamento</string>
-    <string name="ciudad">Provincia</string>
-    <string name="barrio">Distrito</string>
+    <string name="departamento">Provincia</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="barrio">Barrio</string>d
     <string name="direccion_de_envio_pedido">Dirección de envio pedido:</string>
     <string name="dir_residencia">Dir. residencia</string>
     <string name="contacto">Contacto:</string>
@@ -533,8 +533,8 @@
     <string name="gps_permission_granted">Gracias, aceptaste los permisos requeridos para el correcto funcionamiento de esta aplicación.</string>
     <string name="text_alert_tittle_gps_enable">Habilitar servicio GPS</string>
     <string name="active_gps">Tu servicio de ubicación está desactivado, debes habilitarlo para poder recibir servicios, ¿Desea activarlo?</string>
-    <string name="provincia">Provincia</string>
-    <string name="distrito">Distrito</string>
+    <string name="provincia">Ciudad</string>
+    <string name="distrito">Barrio</string>
     <string name="direccion_1">Dirección</string>
     <string name="servicios_publicos">Servicios Publicos</string>
     <string name="sector">Sector</string>
