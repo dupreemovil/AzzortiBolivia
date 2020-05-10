@@ -4,7 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        tools:context="com.dupreincaecuador.dupree.mh_fragments_menu.ReporteRetenidosFragment">
+        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.ReporteRetenidosFragment">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler"

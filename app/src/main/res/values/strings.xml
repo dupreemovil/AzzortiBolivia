@@ -1,5 +1,5 @@
 <resources>
-    <string name="api_url">https://alcor.azzorti.com/azzortiWS/</string>
+    <string name="api_url">https://alcor.azzorti.bo/azzortiWS/</string>
     <!--<string name="api_url">https://alcor2col.azzorti.co/dupreeWS/</string>-->
     <string name="app_name">Azzorti</string>
     <string name="title_home">Home</string>

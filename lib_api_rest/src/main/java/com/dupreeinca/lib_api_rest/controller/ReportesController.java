@@ -1,6 +1,7 @@
 package com.dupreeinca.lib_api_rest.controller;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.dupreeinca.lib_api_rest.R;
 import com.dupreeinca.lib_api_rest.controller.base.TTGenericController;
@@ -188,6 +189,7 @@ public class ReportesController extends TTGenericController {
                 if(result.getCode() == 404){
                     listener.error(TTError.errorFromMessage(result.getRaise().get(0).getField().concat(". ").concat(result.getRaise().get(0).getError())));
                 } else {
+
                     listener.success(result);
                 }
             }

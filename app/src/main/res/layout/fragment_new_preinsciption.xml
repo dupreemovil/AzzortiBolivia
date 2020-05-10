@@ -3,7 +3,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.dupreincaecuador.dupree.mh_fragments_menu.incorporaciones.Preinscripcion.PreinsciptionFragment">
+        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.incorporaciones.Preinscripcion.PreinsciptionFragment">
 
         <ScrollView
             android:id="@+id/scrollRegister"

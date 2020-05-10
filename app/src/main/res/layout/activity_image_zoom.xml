@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context="com.dupreincaecuador.dupree.ImageZoomActivity">
+    tools:context="com.azzortiBolivia.dupree.ImageZoomActivity">
 
     <ImageView
         android:layout_width="200dp"
@@ -13,7 +13,7 @@
         android:id="@+id/imageView"
         android:layout_centerInParent="true" />
 
-    <com.dupreincaecuador.dupree.mh_utilities.PinchZoomImageView
+    <com.azzortiBolivia.dupree.mh_utilities.PinchZoomImageView
         android:visibility="invisible"
         android:id="@+id/pinchZoomImageView"
         android:layout_centerInParent="true"

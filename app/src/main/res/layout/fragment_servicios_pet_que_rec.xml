@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dupreincaecuador.dupree.mh_fragments_menu.Servicios_PetQueRec_Fragment">
+    tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.Servicios_PetQueRec_Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
