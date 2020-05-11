@@ -32,7 +32,9 @@
 
 
         <!--SOLO GERENTE//////////////////////////////////////////////-->
-        <item android:title="@string/posibles_asesoras" android:id="@+id/posibles_asesoras">
+        <item android:title="@string/posibles_asesoras" android:id="@+id/posibles_asesoras"
+            android:visible="false"
+            >
             <menu>
                 <item
                     android:id="@+id/menu_lat_posi_ase"
