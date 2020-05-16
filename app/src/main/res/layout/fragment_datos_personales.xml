@@ -184,12 +184,14 @@
                             android:layout_weight="0.5"
                             android:layout_height="wrap_content">
                             <EditText
+                                android:onClick="@{(v)->callback.onClick(v)}"
                                 bind:isEnable="@{model.refValidated}"
                                 android:text="@={model.extension}"
                                 android:digits="@string/only_letter_basic"
                                 android:maxLength="6"
                                 android:inputType="text"
-                                android:id="@+id/CIExtension"
+                                android:id="@+id/txtCIExtension"
+                                android:focusableInTouchMode="false"
                                 android:layout_marginTop="8dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

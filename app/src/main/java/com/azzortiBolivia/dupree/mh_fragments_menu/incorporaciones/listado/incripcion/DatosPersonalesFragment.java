@@ -65,6 +65,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
     private EditText txtNameIncrip;
     private View view;
     private String estado;
+    private List<ModelList> listCIExtension=null;
 
     public DatosPersonalesFragment() {
 
@@ -162,14 +163,36 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
 
         listDirSend = jsonFile.getParentezcos(ManagerFiles.DIR_SEND.getKey());
         listP = Arrays.asList(getResources().getStringArray(R.array.parentescoOptions));
-        listSexo= new ArrayList<>();
-        listSexo.add(new ModelList(1, "Femenino"));
-        listSexo.add(new ModelList(2, "Masculino"));
-
+        listCIExtension=getExtensions();
+        listSexo=getSexs();
         if(isOnCreate){
             isOnCreate = false;
             loadData(data);
         }
+    }
+
+    public List<ModelList> getExtensions(){
+        List<ModelList> result = new ArrayList<>();
+
+        result.add(new ModelList(1, "BN"));
+        result.add(new ModelList(2, "CB"));
+        result.add(new ModelList(3, "CH"));
+        result.add(new ModelList(4, "EX"));
+        result.add(new ModelList(5, "LP"));
+        result.add(new ModelList(6, "OR"));
+        result.add(new ModelList(7, "PN"));
+        result.add(new ModelList(8, "PT"));
+        result.add(new ModelList(9, "TJ"));
+        result.add(new ModelList(10, "SC"));
+        return result;
+    }
+    public List<ModelList> getSexs(){
+        List<ModelList> result = new ArrayList<>();
+
+        result.add(new ModelList(1, "Femenino"));
+        result.add(new ModelList(2, "Masculino"));
+
+        return result;
     }
 
     public void loadData(DataAsesora data){
@@ -232,6 +255,15 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
                     });
                 }
                 break;
+            case R.id.txtCIExtension:
+                if(listCIExtension!=null){
+                    String titleToShow=getString(R.string.extension);
+                    String sm=model.getExtension();
+                    int i=v.getId();
+                    showList(i, titleToShow, listCIExtension, sm);
+                }
+                break;
+
             case R.id.txtSexo://
                 if(listSexo!=null){
                     String s=getString(R.string.sexo);
@@ -268,6 +300,10 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
                     case R.id.txtSexo:
                         binding.txtSexo.setError(null);
                         model.setSexo(item.getName());
+                        break;
+                    case R.id.txtCIExtension:
+                        binding.txtCIExtension.setError(null);
+                        model.setExtension(item.getName());
                         break;
                 }
             }
