@@ -435,6 +435,7 @@
     <string name="concat_codigo">Código: %1$s</string>
     <string name="concat_pts">%1$s pts.</string>
     <string name="concat_dolar">USD %1$s</string>
+    <string name="concat_BS">Bs. %1$s</string>
 
     <string name="concat_cedula">Cédula: %1$s</string>
     <string name="concat_dir">Dirección: %1$s</string>
@@ -482,7 +483,7 @@
     <string name="razon_two_points">Razón:</string>
     <string name="usuario_two_points">Usuario:</string>
     <string name="cedula_two_points">Cédula:</string>
-    <string name="saldo_two_points">Saldo:</string>
+    <string name="saldo_two_points">Premio:</string>
     <string name="no_cambia">No cambia</string>
     <string name="banco_two_points">Banco:</string>
     <string name="valor_two_points">Valor:</string>

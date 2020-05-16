@@ -36,7 +36,7 @@ public class PagosRealizHolder extends RecyclerView.ViewHolder{
         binding.tvBanco.setText(item.getBanco());
 
         NumberFormat formatter = NumberFormat.getInstance(Locale.US);
-        binding.tvValor.setText(resources.getString(R.string.concat_dolar, formatter.format(item.getValor())));
+        binding.tvValor.setText(resources.getString(R.string.concat_BS, formatter.format(item.getValor())));
 
         binding.cardViewBackGround.setCardBackgroundColor(position%2!=0 ? resources.getColor(R.color.transp_Accent) : resources.getColor(R.color.transp_azulDupree));
 
