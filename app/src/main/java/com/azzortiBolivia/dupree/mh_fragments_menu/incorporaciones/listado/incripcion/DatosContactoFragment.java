@@ -187,10 +187,10 @@ public class DatosContactoFragment extends BaseFragment implements View.OnClickL
             return false;
         }
 
-        if(TextUtils.isEmpty(model.getPagare_adverso())){
-            msgToast("pagaré adverso... Verifique");
-            return false;
-        }
+//        if(TextUtils.isEmpty(model.getPagare_adverso())){//@@--{--
+//            msgToast("pagaré adverso... Verifique");
+//            return false;
+//        }
 
         if(TextUtils.isEmpty(model.getImg_terminos())){
             msgToast("Servicios publicos... Verifique");

@@ -1,4 +1,6 @@
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:bind="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
@@ -9,7 +11,6 @@
             type="com.dupreeinca.lib_api_rest.model.dto.request.InscriptionDTO"/>
     </data>
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -144,24 +145,58 @@
                         android:textStyle="bold"
                         android:textColor="@color/azulDupree"
                         android:text="@string/datos_personales"/>
-
-                    <android.support.design.widget.TextInputLayout
-                        android:layout_marginTop="8dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
+                    <LinearLayout
+                        android:layout_weight="0"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <EditText
-                            android:text="@={model.cedula}"
-                            android:id="@+id/txtIdentyCard"
-                            android:enabled="false"
-                            android:inputType="number"
-                            android:layout_marginTop="8dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        >
+
+                        <android.support.design.widget.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:digits="@string/only_number_basic"
-                            android:hint="@string/cedula"/>
-                    </android.support.design.widget.TextInputLayout>
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="0.5"
+                            >
+
+                            <EditText
+                                android:id="@+id/txtIdentyCard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:digits="@string/only_number_basic"
+                                android:enabled="false"
+                                android:hint="@string/cedula"
+                                android:inputType="number"
+                                android:text="@={model.cedula}" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                bind:isEnable="@{model.refValidated}"
+                                android:text="@={model.extension}"
+                                android:digits="@string/only_letter_basic"
+                                android:maxLength="6"
+                                android:inputType="text"
+                                android:id="@+id/CIExtension"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/extension"/>
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
 
                     <android.support.design.widget.TextInputLayout
                         android:id="@+id/layoutTxtNameIncrip"
@@ -241,24 +276,68 @@
                             android:hint="@string/fecha_de_nacimiento"/>
                     </android.support.design.widget.TextInputLayout>
 
+
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="8dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="16dp"
                         android:layout_width="match_parent"
+                        android:layout_weight="0.5"
                         android:layout_height="wrap_content">
                         <EditText
                             bind:isEnable="@{model.refValidated}"
-                            android:text="@={model.zona_seccion}"
-                            android:digits="@string/only_number_basic"
-                            android:maxLength="6"
-                            android:inputType="number"
-                            android:id="@+id/txtZone"
+                            android:onClick="@{(v)->callback.onClick(v)}"
+                            android:text="@={model.sexo}"
+                            android:id="@+id/txtSexo"
+                            android:focusableInTouchMode="false"
                             android:layout_marginTop="8dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/sector"/>
+                            android:hint="@string/sexo"/>
                     </android.support.design.widget.TextInputLayout>
+                    <LinearLayout
+                        android:layout_weight="0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_weight="0.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                bind:isEnable="@{model.refValidated}"
+                                android:text="@={model.zona_seccion}"
+                                android:digits="@string/only_number_basic"
+                                android:maxLength="6"
+                                android:inputType="number"
+                                android:id="@+id/txtZone"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/zona_seccion"/>
+                        </android.support.design.widget.TextInputLayout>
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content">
+                            <EditText
+                                bind:isEnable="@{model.refValidated}"
+                                android:text="@={model.sector}"
+                                android:digits="@string/only_number_basic"
+                                android:maxLength="6"
+                                android:inputType="number"
+                                android:id="@+id/txtSector"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/sector"/>
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <LinearLayout

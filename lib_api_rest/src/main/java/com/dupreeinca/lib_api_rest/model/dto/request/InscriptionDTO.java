@@ -29,10 +29,13 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
 
     //DATOS PERSONALES
     private String cedula = "";//
+    private String extension;
     private transient String nombre = "";//
+    private transient String id_sexo = "";//
+    private transient String sexo = "";//
     private String nacimiento = "";//
     private String zona_seccion = "";//
-
+    private String sector = "";//
     //DIRECCION DERESIDENCIA
     private String direccion_concatenada = "";//
 
@@ -135,6 +138,7 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     private int code;
     private List<RaiseDTO> raise;
 
+
     public InscriptionDTO() {
         referencia = new ArrayList<>();
         referencia.add(new Referencia());
@@ -152,8 +156,12 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     protected InscriptionDTO(Parcel in) {
         referenciado_por = in.readString();
         cedula = in.readString();
+        extension=in.readString();
+        id_sexo=in.readString();
+        sexo=in.readString();
         nacimiento = in.readString();
         zona_seccion = in.readString();
+        sector=in.readString();
         direccion_concatenada = in.readString();
         tipo_via1 = in.readString();
         tipo_via2 = in.readString();
@@ -216,8 +224,12 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(referenciado_por);
         dest.writeString(cedula);
+        dest.writeString(extension);
+        dest.writeString(id_sexo);
+        dest.writeString(sexo);
         dest.writeString(nacimiento);
         dest.writeString(zona_seccion);
+        dest.writeString(sector);
         dest.writeString(direccion_concatenada);
         dest.writeString(tipo_via1);
         dest.writeString(tipo_via2);
@@ -304,9 +316,10 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         //setNombre(data.getNombre());
         setNacimiento(data.getNacimiento());
         setZona_seccion(data.getZona_seccion());
+        setSector(data.getSector());
 
         //DIRECCION DE RESIDENCIA
-        setDireccion_concatenada("");//se hace automatico
+        setDireccion_concatenada("");// hace automatico
 
         setTipo_via1(data.getTipo_via1());
         setTipo_via2(data.getTipo_via2());
@@ -427,6 +440,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         setReferenciado_hint("");
         //DATOS PERSONALES
         setCedula("");
+        setId_Sexo("");
+        setSexo("");
         setNombre("");
         setNacimiento("");
         setZona_seccion("");
@@ -542,9 +557,20 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     }
 
     @Bindable
+    public String getExtension() {return extension;}
+
+    @Bindable
     public String getNacimiento() {
         return nacimiento;
     }
+
+    @Bindable
+    public String getSector() {
+        return sector;
+    }
+
+
+
 
     @Bindable
     public String getZona_seccion() {
@@ -747,6 +773,16 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     @Bindable
     public String getNombre() {
         return nombre;
+    }
+
+    @Bindable
+    public String getId_sexo() {
+        return id_sexo;
+    }
+
+    @Bindable
+    public String getSexo() {
+        return sexo;
     }
 
     @Bindable
@@ -1006,6 +1042,10 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         this.cedula = cedula;
         notifyPropertyChanged(BR.cedula);
     }
+    public void setExtension(String extension) {
+        this.extension = extension;
+        notifyPropertyChanged(BR.extension);
+    }
 
     public void setImg_cedula(List<String> img_cedula) {
         this.img_cedula = img_cedula;
@@ -1032,14 +1072,31 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         notifyPropertyChanged(BR.nombre);
     }
 
+    public void setId_Sexo(String id_sexo) {
+        this.id_sexo = id_sexo;
+        notifyPropertyChanged(BR.id_sexo);
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+        notifyPropertyChanged(BR.sexo);
+    }
+
+
     public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
         notifyPropertyChanged(BR.nacimiento);
     }
 
+
     public void setZona_seccion(String zona_seccion) {
         this.zona_seccion = zona_seccion;
         notifyPropertyChanged(BR.zona_seccion);
+    }
+
+    public void setSector(String sector) {
+        this.sector = sector;
+        notifyPropertyChanged(BR.sector);
     }
 
     public void setTipo_via1(String tipo_via1) {

@@ -206,17 +206,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_horizontal|center_vertical"
-                            android:text="@string/pagare_adverso"/>
+                            android:text="@string/servicios_publicos"/>
 
                         <ImageView
-                            android:onClick="@{(v) -> callback.onClick(v)}"
                             bind:isEnable="@{model.refValidated}"
-                            bind:picassoUrlFull="@{model.pagare_adverso}"
-                            android:id="@+id/imgPagAdverso"
+                            android:onClick="@{(v) -> callback.onClick(v)}"
+                            bind:picassoUrlFull="@{model.img_terminos}"
+                            android:id="@+id/imgServicios"
                             android:src="@drawable/ph_add_image2"
                             android:scaleType="center"
                             android:layout_width="match_parent"
-                            android:layout_height="128dp" />
+                            android:layout_height="128dp"
+                            android:clickable="false"
+                            android:enabled="false"/>
 
                     </LinearLayout>
 
@@ -229,44 +231,6 @@
                         android:layout_height="0dp"
                         android:layout_weight="0.5"
                         android:weightSum="1.0">
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="0dp"
-                            android:layout_weight="1.0"
-                            android:padding="0dp"
-                            android:layout_height="match_parent">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:text="@string/servicios_publicos"/>
-
-                            <!--<ImageView
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated}"
-                                bind:picassoUrlFull="@{model.img_terminos}"
-                                android:id="@+id/imgServicios"
-                                android:src="@drawable/ph_add_image2"
-                                android:scaleType="center"
-                                android:layout_width="match_parent"
-                                android:layout_height="128dp" />-->
-
-                            <ImageView
-                                bind:isEnable="@{model.refValidated}"
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:picassoUrlFull="@{model.img_terminos}"
-                                android:id="@+id/imgServicios"
-                                android:src="@drawable/ph_add_image2"
-                                android:scaleType="center"
-                                android:layout_width="match_parent"
-                                android:layout_height="128dp"
-                                android:clickable="false"
-                                android:enabled="false"/>
-
-                        </LinearLayout>
-
                     </LinearLayout>
 
                 </LinearLayout>

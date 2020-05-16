@@ -255,14 +255,22 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
 
     private void addRetenidos(ListPreinscripcionDTO result){
         responseListPreinscripcion = result;
+
         list.clear();
         if(result.getResult()!=null) {
             list.addAll(result.getResult());
+            enableInscriptions();//@@
         }
 
         adapter_listPre.notifyDataSetChanged();
     }
+    void enableInscriptions(){
 
+        for (Preinscripcion p: list) {
+            p.setEstado("AUTORIZADO");
+
+        }
+    }
     private final int REQUEST_CODE_INCRPCION = 5;
     private void gotoInscripcion(boolean modeEdit, String estado){
         Intent i = new Intent(getActivity(), InscripcionActivity.class);

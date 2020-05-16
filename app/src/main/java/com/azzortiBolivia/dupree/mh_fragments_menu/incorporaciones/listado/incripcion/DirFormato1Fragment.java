@@ -118,6 +118,7 @@ public class DirFormato1Fragment extends BaseFragment implements View.OnClickLis
         LoadJsonFile jsonFile = new LoadJsonFile(getContext());
         listBis = jsonFile.getParentezcos(ManagerFiles.BIS.getKey());
         listDirSend = jsonFile.getParentezcos(ManagerFiles.DIR_SEND.getKey());
+
         listLetra = jsonFile.getParentezcos(ManagerFiles.LETRA.getKey());
         listPCardinal = jsonFile.getParentezcos(ManagerFiles.PCARDINAL.getKey());
         listTipoVia = jsonFile.getParentezcos(ManagerFiles.TIPO_VIA.getKey());
@@ -131,28 +132,6 @@ public class DirFormato1Fragment extends BaseFragment implements View.OnClickLis
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            //DIRECCION DE RESIDENCIA
-           /* case R.id.txt_spn_tipo_via1://
-                showList(view.getId(), getString(R.string.tipo_via), listTipoVia, model.getTipo_via1());
-                break;
-            case R.id.txt_spn_letra1://
-                showList(view.getId(), getString(R.string.letra), listLetra, model.getLetra1());
-                break;
-            case R.id.txt_spn_bis1://
-                showList(view.getId(), getString(R.string.bis), listBis, model.getBis1());
-                break;
-            case R.id.txt_spn_letra2://
-                showList(view.getId(), getString(R.string.letra), listLetra, model.getLetra2());
-                break;
-            case R.id.txt_spn_pcardinal1://
-                showList(view.getId(), getString(R.string.sur_este), listPCardinal, model.getPcardinal1());
-                break;*/
-            /*case R.id.txt_spn_letra3://
-                showList(view.getId(), getString(R.string.letra), listLetra, model.getLetra3());
-                break;*/
-            /*case R.id.txt_spn_pcardinal2://
-                showList(view.getId(), getString(R.string.sur_este), listPCardinal, model.getPcardinal2());
-                break;*/
             case R.id.txt_spn_departamento://
                 if(listDpto!=null)
                     showDpto(view.getId(), getString(R.string.departamento), listDpto, model.getDepartamento());
@@ -187,9 +166,6 @@ public class DirFormato1Fragment extends BaseFragment implements View.OnClickLis
                 break;
             case R.id.txt_spn_pcardinal_env_1://
                 showList(view.getId(), getString(R.string.sur_este), listPCardinal, model.getPcardinal1());
-                break;
-            case R.id.txt_spn_letra_env_3://
-                showList(view.getId(), getString(R.string.letra), listLetra, model.getLetra_env_3());
                 break;
             case R.id.txt_spn_pcardinal_env_2://
                 showList(view.getId(), getString(R.string.sur_este), listPCardinal, model.getPcardinal2());
@@ -300,21 +276,21 @@ public class DirFormato1Fragment extends BaseFragment implements View.OnClickLis
             }
 
             if (!model.getTipo_via_env_1().toUpperCase().equals("Otro".toUpperCase())) {
-                if (model.getNumero_env_1().isEmpty()) {
-                    msgToast("Dir. Envío > Número 1... Verifique");
-                    valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroEnv1);
-                    return false;
-                }
-                if (model.getNumero_env_2().isEmpty()) {
-                    msgToast("Dir. Envío > Número 2... Verifique");
-                    valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroEnv2);
-                    return false;
-                }
-                if (model.getNumero_env_3().isEmpty()) {
-                    msgToast("Dir. Envío > Número 2... Verifique");
-                    valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroEnv3);
-                    return false;
-                }
+//                if (model.getNumero_env_1().isEmpty()) {
+//                    msgToast("Dir. Envío > Número 1... Verifique");
+//                    valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroEnv1);
+//                    return false;
+//                }
+//                if (model.getNumero_env_2().isEmpty()) {
+//                    msgToast("Dir. Envío > Número 2... Verifique");
+//                    valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroEnv2);
+//                    return false;
+//                }
+//                if (model.getNumero_env_3().isEmpty()) {
+//                    msgToast("Dir. Envío > Número 2... Verifique");
+//                    valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroEnv3);
+//                    return false;
+//                }
             }
 
             if (model.getTipo_via_env_1().toUpperCase().equals("Otro".toUpperCase())) {
@@ -355,34 +331,6 @@ public class DirFormato1Fragment extends BaseFragment implements View.OnClickLis
             public void result(ModelList item) {
                 switch(id){
                     //DIRECCION DE RESIDENCIA
-                    /*case R.id.txt_spn_tipo_via1:
-                        binding.txtSpnTipoVia1.setError(null);
-                        model.setTipo_via1(item.getName());
-                        break;
-                    case R.id.txt_spn_letra1:
-                        binding.txtSpnLetra1.setError(null);
-                        model.setLetra1(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_bis1:
-                        binding.txtSpnBis1.setError(null);
-                        model.setBis1(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_letra2:
-                        binding.txtSpnLetra2.setError(null);
-                        model.setLetra2(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_pcardinal1:
-                        binding.txtSpnPcardinal1.setError(null);
-                        model.setPcardinal1(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_letra3:
-                        binding.txtSpnLetra3.setError(null);
-                        model.setLetra3(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_pcardinal2:
-                        binding.txtSpnPcardinal2.setError(null);
-                        model.setPcardinal2(item.getId() == -1 ? "" : item.getName());
-                        break;*/
 
                     //DIRECCION DE ENVIO
                     case R.id.txtSpnDirSend:
@@ -395,30 +343,30 @@ public class DirFormato1Fragment extends BaseFragment implements View.OnClickLis
                         binding.txtSpnTipoViaEnv1.setError(null);
                         model.setTipo_via_env_1(item.getName());
                         break;
-                    case R.id.txt_spn_letra_env_1:
-                        binding.txtSpnLetraEnv1.setError(null);
-                        model.setLetra_env_1(item.getId() == -1 ? "" : item.getName());
-                        break;
+//                    case R.id.txt_spn_letra_env_1:
+//                        binding.txtSpnLetraEnv1.setError(null);
+//                        model.setLetra_env_1(item.getId() == -1 ? "" : item.getName());
+//                        break;
                     case R.id.txt_spn_bis_env_1:
                         binding.txtSpnBisEnv1.setError(null);
                         model.setBis_env_1(item.getId() == -1 ? "" : item.getName());
                         break;
-                    case R.id.txt_spn_letra_env_2:
-                        binding.txtSpnLetraEnv2.setError(null);
-                        model.setLetra_env_2(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_pcardinal_env_1:
-                        binding.txtSpnPcardinalEnv1.setError(null);
-                        model.setPcardinal_env_1(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_letra_env_3:
-                        binding.txtSpnLetraEnv3.setError(null);
-                        model.setLetra_env_3(item.getId() == -1 ? "" : item.getName());
-                        break;
-                    case R.id.txt_spn_pcardinal_env_2:
-                        binding.txtSpnPcardinalEnv2.setError(null);
-                        model.setPcardinal_env_2(item.getId() == -1 ? "" : item.getName());
-                        break;
+//                    case R.id.txt_spn_letra_env_2:
+//                        binding.txtSpnLetraEnv2.setError(null);
+//                        model.setLetra_env_2(item.getId() == -1 ? "" : item.getName());
+//                        break;
+//                    case R.id.txt_spn_pcardinal_env_1:
+//                        binding.txtSpnPcardinalEnv1.setError(null);
+//                        model.setPcardinal_env_1(item.getId() == -1 ? "" : item.getName());
+//                        break;
+//                    case R.id.txt_spn_letra_env_3:
+//                        binding.txtSpnLetraEnv3.setError(null);
+//                        model.setLetra_env_3(item.getId() == -1 ? "" : item.getName());
+//                        break;
+//                    case R.id.txt_spn_pcardinal_env_2:
+//                        binding.txtSpnPcardinalEnv2.setError(null);
+//                        model.setPcardinal_env_2(item.getId() == -1 ? "" : item.getName());
+//                        break;
                 }
             }
         });

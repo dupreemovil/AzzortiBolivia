@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import com.azzortiBolivia.dupree.mh_dialogs.ListString;
+import com.azzortiBolivia.dupree.mh_dialogs.SingleListDialog;
 import com.image.lib_image.util.PermissionCamera;
 import com.dupreeinca.lib_api_rest.controller.InscripcionController;
 import com.dupreeinca.lib_api_rest.controller.UploadFileController;
@@ -53,6 +55,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
     private LoadJsonFile jsonFile;
     private List<ModelList> listDirSend;
     List<String> listP;
+    private List<ModelList> listSexo=null;
     private DataAsesora data;
     private PermissionCamera camera;
     private UploadFileController uploadFileController;
@@ -159,6 +162,9 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
 
         listDirSend = jsonFile.getParentezcos(ManagerFiles.DIR_SEND.getKey());
         listP = Arrays.asList(getResources().getStringArray(R.array.parentescoOptions));
+        listSexo= new ArrayList<>();
+        listSexo.add(new ModelList(1, "Femenino"));
+        listSexo.add(new ModelList(2, "Masculino"));
 
         if(isOnCreate){
             isOnCreate = false;
@@ -172,7 +178,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
         model.setCedula(data.getCedula().isEmpty() ? Incorp_ListPre_Fragment.identySelected : data.getCedula());
         model.setNombre(data.getNombre().isEmpty() ? Incorp_ListPre_Fragment.nameSelected : data.getNombre());//se redunda xq a veces no llega
 
-
+        model.setSexo("Femenino");
         model.setFormato_direccion(data.getFormato_direccion());
         model.setModeEdit(data.isModeEdit());
 
@@ -226,6 +232,14 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
                     });
                 }
                 break;
+            case R.id.txtSexo://
+                if(listSexo!=null){
+                    String s=getString(R.string.sexo);
+                    String sm=model.getSexo();
+                    int i=v.getId();
+                    showList(i, s, listSexo, sm);
+                }
+                break;
             case R.id.imgB_CleanRef://
                 setRefValidated(false);
                 break;
@@ -243,6 +257,29 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
                 break;
         }
     }
+
+    public void showList(int id, String title, List<ModelList> data, String itemSelected){
+        SingleListDialog dialog = new SingleListDialog();
+        Log.i("@@--", "Showing list"+data.toString());
+        dialog.loadData(title, data, itemSelected, new SingleListDialog.ListenerResponse() {
+            @Override
+            public void result(ModelList item) {
+                switch(id){
+                    case R.id.txtSexo:
+                        binding.txtSexo.setError(null);
+                        model.setSexo(item.getName());
+                        break;
+                }
+            }
+        });
+        dialog.show(getActivity().getSupportFragmentManager(),"mDialog");
+    }
+
+    private void clearSexo(){
+        listSexo=null;
+        model.setSexo("");
+    }
+
 
     public boolean validate() {
         Log.e(TAG,"validateRegister() -> init()");
