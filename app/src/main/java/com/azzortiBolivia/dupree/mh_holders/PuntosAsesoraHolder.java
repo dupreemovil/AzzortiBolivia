@@ -41,7 +41,7 @@ public class PuntosAsesoraHolder extends RecyclerView.ViewHolder{
         binding.tvEfectivos.setText("".concat(String.valueOf(item.getPuntos_Efectivos())));
         binding.tvRedimidos.setText("".concat(item.getPuntos_Redimidos()));
         binding.tvPago.setText("".concat(String.valueOf(item.getEstado_Pago())));
-
+        binding.tvDescuentoTotal.setText("".concat(String.valueOf(item.getPerdidos_Devolucion())));
         binding.cardViewBackGround.setCardBackgroundColor(position%2!=0 ? resources.getColor(R.color.transp_Accent) : resources.getColor(R.color.transp_azulDupree));
 
 

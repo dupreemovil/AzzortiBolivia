@@ -73,23 +73,27 @@
                                     tools:text="Enorelis Perez"/>
 
                                 <TextView
+                                    android:visibility="invisible"
                                     android:id="@+id/ptsEfectivos"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     tools:text="Pts. Efectivos: 1085"/>
 
                                 <TextView
+                                    android:visibility="invisible"
                                     android:id="@+id/ptsRedimidos"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     tools:text="Pts. Redimidos: 490"/>
 
                                 <TextView
+                                    android:visibility="invisible"
                                     android:id="@+id/ptsDisponibles"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     tools:text="Pts. Disponibles: 595"/>
                                 <TextView
+                                    android:visibility="gone"
                                     android:id="@+id/ptsPendientes"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"

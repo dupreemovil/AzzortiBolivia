@@ -111,6 +111,7 @@
 
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                         <android.support.v7.widget.CardView
@@ -160,6 +161,7 @@
                             android:layout_height="match_parent">
 
                             <LinearLayout
+                                android:visibility="gone"
                                 android:orientation="horizontal"
                                 android:layout_margin="5dp"
                                 android:layout_width="match_parent"
@@ -186,6 +188,45 @@
                             </LinearLayout>
 
                         </android.support.v7.widget.CardView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_margin="0.5dp"
+                        card_view:cardCornerRadius="6dp"
+                        card_view:cardUseCompatPadding="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_margin="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:textStyle="normal"
+                                android:textSize="13sp"
+                                android:textColor="@color/azulDupree"
+                                android:text="PUNTOS DESCONTAOS:"/>
+                            <TextView
+                                android:id="@+id/tvDescuentoTotal"
+                                android:layout_weight="0.5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textStyle="normal"
+                                android:textSize="14sp"
+                                android:textColor="@color/gray_6"
+                                android:text="234"/>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -227,6 +268,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -267,6 +309,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -306,6 +349,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -345,6 +389,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -384,6 +429,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -424,6 +470,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -463,6 +510,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -502,6 +550,7 @@
                         </android.support.v7.widget.CardView>
                 </LinearLayout>
                 <LinearLayout
+                    android:visibility="gone"
                     android:weightSum="1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
