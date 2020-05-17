@@ -18,6 +18,7 @@ import com.dupreeinca.lib_api_rest.model.dto.response.ListPQR;
 import com.dupreeinca.lib_api_rest.model.dto.response.ListPagosRealizados;
 import com.dupreeinca.lib_api_rest.model.dto.response.ListPanelGte;
 import com.dupreeinca.lib_api_rest.model.dto.response.PanelAsesoraDTO;
+import com.dupreeinca.lib_api_rest.model.dto.response.PedidoDigitadoDTO;
 import com.dupreeinca.lib_api_rest.model.dto.response.PuntosAsesoraDTO;
 import com.dupreeinca.lib_api_rest.model.dto.response.ReferidosDTO;
 import com.dupreeinca.lib_api_rest.model.dto.response.RequeridUbicacion;
@@ -275,6 +276,33 @@ public class ReportesController extends TTGenericController {
             }
         });
     }
+
+    public void getPedidosDigitados(Identy data, final TTResultListener<PedidoDigitadoDTO> listener){
+        if(!this.isNetworkingOnline(getContext())){
+            listener.error(TTError.errorFromMessage(context.getResources().getString(R.string.http_datos_no_disponibles)));
+            return;
+        }
+
+        ReportesDAO dao = new ReportesDAO(getContext());
+        dao.getPedidosDigitados(data, new TTResultListener<PedidoDigitadoDTO>() {
+            @Override
+            public void success(PedidoDigitadoDTO result) {
+                //Errror de Backend
+                if(result.getCode() == 404){
+                    listener.error(TTError.errorFromMessage(result.getRaise().get(0).getField().concat(". ").concat(result.getRaise().get(0).getError())));
+                } else {
+                    listener.success(result);
+                }
+            }
+
+            @Override
+            public void error(TTError error) {
+                listener.error(error);
+            }
+        });
+    }
+
+
 
     public void getPedRetenidos(Identy data, final TTResultListener<RetenidosDTO> listener){
         if(!this.isNetworkingOnline(getContext())){

@@ -1,6 +1,7 @@
 package com.dupreeinca.lib_api_rest.dao;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.dupreeinca.lib_api_rest.dao.base.TTCallback;
 import com.dupreeinca.lib_api_rest.dao.base.TTGenericDAO;
@@ -17,6 +18,7 @@ import com.dupreeinca.lib_api_rest.model.dto.response.ListPQR;
 import com.dupreeinca.lib_api_rest.model.dto.response.ListPagosRealizados;
 import com.dupreeinca.lib_api_rest.model.dto.response.ListPanelGte;
 import com.dupreeinca.lib_api_rest.model.dto.response.PanelAsesoraDTO;
+import com.dupreeinca.lib_api_rest.model.dto.response.PedidoDigitadoDTO;
 import com.dupreeinca.lib_api_rest.model.dto.response.PuntosAsesoraDTO;
 import com.dupreeinca.lib_api_rest.model.dto.response.ReferidosDTO;
 import com.dupreeinca.lib_api_rest.model.dto.response.RequeridUbicacion;
@@ -209,8 +211,32 @@ public class ReportesDAO extends TTGenericDAO {
         },getRetrofit()));
     }
 
+    public void getPedidosDigitados(Identy data, final TTResultListener<PedidoDigitadoDTO> listener){
+        Rest userREST = getRetrofit().create(Rest.class);
+        String s=new Gson().toJson(data);
+        Log.i("@@", "@@--- Value jSon:" + s );
+        s="{\"nume_lide\":\"103\"}";
+        Log.i("@@", "@@--- Value sent:" + s );
+        Call<PedidoDigitadoDTO> call = userREST.getPedidosDigitados(s);
+        call.enqueue(new TTCallback<PedidoDigitadoDTO>(new TTResultListener<PedidoDigitadoDTO>() {
+            @Override
+            public void success(PedidoDigitadoDTO result) {
+
+                listener.success(result);
+            }
+
+            @Override
+            public void error(TTError error) {
+
+                listener.error(error);
+            }
+        },getRetrofit()));
+    }
+
+
     public void getPedRetenidos(Identy data, final TTResultListener<RetenidosDTO> listener){
         Rest userREST = getRetrofit().create(Rest.class);
+        String s=new Gson().toJson(data);
         Call<RetenidosDTO> call = userREST.getPedRetenidos(new Gson().toJson(data));
         call.enqueue(new TTCallback<RetenidosDTO>(new TTResultListener<RetenidosDTO>() {
             @Override
@@ -279,6 +305,13 @@ public class ReportesDAO extends TTGenericDAO {
         Call<ReferidosDTO> getIncentivosReferido(
                 @Query("filters") String jsonCedula, @Query("paginator") String pag
         );
+
+        @FormUrlEncoded
+        @POST("reportes/pe_lider")
+        Call<PedidoDigitadoDTO> getPedidosDigitados(@Field("Params") String jsonCedula);
+
+
+
 
         @GET("reportes/pase_pedidos")
         Call<RetenidosDTO> getPedRetenidos(@Query("filters") String jsonCedula);

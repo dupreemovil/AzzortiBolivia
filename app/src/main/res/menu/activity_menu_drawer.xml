@@ -105,6 +105,7 @@
                     android:icon="@drawable/ic_loyalty_white_24dp"
                     android:title="@string/redimir_incentivos" />-->
                 <!--SOLO ASESORA//////////////////////////////////////////////-->
+
                 <item
                     android:id="@+id/menu_lat_incent_por_referido"
                     android:icon="@drawable/ic_card_giftcard_white_24dp"
@@ -139,6 +140,10 @@
                     <!--android:id="@+id/menu_lat_cupo_saldo_conf"-->
                     <!--android:icon="@drawable/ic_credit_card_white_24dp"-->
                     <!--android:title="@string/cupo_saldo_y_conferencia_asesora" />-->
+                <item
+                    android:id="@+id/menu_lat_pedid_digitado"
+                    android:icon="@drawable/ic_card_giftcard_white_24dp"
+                    android:title="@string/pedidos_digitados" />
                 <item
                     android:id="@+id/menu_lat_pedidos_ret"
                     android:icon="@drawable/ic_assignment_late_white_24dp"

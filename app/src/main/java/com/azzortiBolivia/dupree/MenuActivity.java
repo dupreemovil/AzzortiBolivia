@@ -26,6 +26,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.azzortiBolivia.dupree.mh_fragments_menu.PedidosDigitadosFragment;
 import com.dupreeinca.lib_api_rest.model.dto.response.realm.Catalogo;
 import com.dupreeinca.lib_api_rest.model.dto.response.realm.Oferta;
 import com.dupreeinca.lib_api_rest.model.view.Profile;
@@ -304,15 +305,21 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 ((IncentivosReferidoFragment) fragmentoGenerico).loadData(perfil);
                 break;
             //LISTO PARA PRUEBAS ( TODOS - GERENTE BUSCAR ASESORA )
-            case R.id.menu_lat_reportes:
-                fragmentoGenerico = new ReportesFragment();
-//                ((ReportesFragment)fragmentoGenerico).loadData(perfil);
+            case R.id.menu_lat_pedid_digitado:
+                fragmentoGenerico = new PedidosDigitadosFragment();
+                ((PedidosDigitadosFragment)fragmentoGenerico).loadData(perfil);
                 break;
             case R.id.menu_lat_pedidos_ret:
                 //LISTO PARA PRUEBAS ( SOLO GERENTE )
 //                enableSearch(!perfil.getPerfil().equals(Profile.ADESORA),false,false,getString(R.string.cedula_asesora));
                 fragmentoGenerico = new ReporteRetenidosFragment();
+
                 break;
+            case R.id.menu_lat_reportes:
+                fragmentoGenerico = new ReportesFragment();
+//                ((ReportesFragment)fragmentoGenerico).loadData(perfil);
+                break;
+
             case R.id.menu_lat_pet_quej_rec_pqr:
                 //LISTO PARA PRUEBAS ( PAGINA )
                 //fragmentoGenerico = new Servicios_PetQueRec_Fragment();// es el mismo del menu ppal
