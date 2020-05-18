@@ -1,6 +1,7 @@
 package com.dupreeinca.lib_api_rest.dao.base;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.dupreeinca.lib_api_rest.model.base.TTError;
 import com.dupreeinca.lib_api_rest.model.base.TTResultListener;
@@ -25,6 +26,7 @@ public class TTCallback<T> implements retrofit2.Callback<T> {
 
     @Override
     public void onResponse(@NonNull retrofit2.Call<T> call, @NonNull Response<T> response) {
+        Log.e("@@-- onResponse", call.request().url().toString());
         int code=response.code();
         TTError ttError;
         String jsonInString = "";
@@ -34,6 +36,7 @@ public class TTCallback<T> implements retrofit2.Callback<T> {
 
                 try {
                     jsonInString = response.errorBody().string();
+                    Log.e("@@--", "Retrofit Response : " + jsonInString);
                     ttError = new Gson().fromJson(jsonInString, TTError.class);
                     if (ttError != null && ttError.getRaise() != null) {
                         ttError.setMessage(ttError.getRaise().get(0).getField().concat(". ").concat(ttError.getRaise().get(0).getError()));
@@ -51,7 +54,13 @@ public class TTCallback<T> implements retrofit2.Callback<T> {
                 listener.error(ttError);
                 return;
             }
-            listener.success(response.body());
+            else{
+
+                Log.e( "@@--JSON response", ": " + new Gson().toJson(response.body()));
+                listener.success(response.body());
+            }
+
+
             return;
         }
 

@@ -82,6 +82,7 @@ public class PedidosDigitadosFragment extends BaseFragment implements PedidosDig
 
 
     public void checkPedidosDigitados(){
+
         if(list.size()<1){//OJO REFREZCAR CON PULL REFRESH
             showProgress();
             String s=perfil.getValor();
@@ -89,9 +90,10 @@ public class PedidosDigitadosFragment extends BaseFragment implements PedidosDig
                 @Override
                 public void success(PedidoDigitadoDTO result) {
                     dismissProgress();
-                    addPedidosDigitados(result.getResult().getTable());
-                }
+                    addPedidosDigitados(result);
+                    updateView(result);
 
+                }
                 @Override
                 public void error(TTError error) {
                     dismissProgress();
@@ -101,25 +103,25 @@ public class PedidosDigitadosFragment extends BaseFragment implements PedidosDig
         }
     }
 
-    private void addPedidosDigitados(List<PedidoDigitado> pedidoDigitadoList){
+    private void addPedidosDigitados(PedidoDigitadoDTO  pedidosDigitados){
         list.clear();
         listFilter.clear();
 
-        if(pedidoDigitadoList!=null) {
-            list.addAll(pedidoDigitadoList);
-            listFilter.addAll(pedidoDigitadoList);
+        if(pedidosDigitados!=null) {
+            list.addAll(pedidosDigitados.getResult());
+            listFilter.addAll(pedidosDigitados.getResult());
             adapter_pedido_digitado.notifyDataSetChanged();
         }
     }
 
-    private void updateView(ListaPedidosDigitados listaReferidos){
+    private void updateView(PedidoDigitadoDTO listaACargar){
         list.clear();
         listFilter.clear();
-        list.addAll(listaReferidos.getTable());
-        listFilter.addAll(listaReferidos.getTable());
+        list.addAll(listaACargar.getResult());
+        listFilter.addAll(listaACargar.getResult());
 
         binding.cardViewBackGround.setVisibility(View.VISIBLE);
-        binding.tvNombreAsesora.setText(listaReferidos.getAsesora());
+        binding.tvNombreAsesora.setText(listaACargar.getStatus());
 
         adapter_pedido_digitado.notifyDataSetChanged();
     }
@@ -130,7 +132,7 @@ public class PedidosDigitadosFragment extends BaseFragment implements PedidosDig
             @Override
             public void success(PedidoDigitadoDTO result) {
                 dismissProgress();
-                updateView(result.getResult());
+                updateView(result);
             }
 
             @Override
@@ -149,34 +151,34 @@ public class PedidosDigitadosFragment extends BaseFragment implements PedidosDig
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.menu_search, menu);
-        final MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setQueryHint(getString(R.string.cedula_asesora));
+//        inflater.inflate(R.menu.menu_search, menu);
+//        final MenuItem searchItem = menu.findItem(R.id.action_search);
+//        SearchView searchView = (SearchView) searchItem.getActionView();
+//        searchView.setQueryHint(getString(R.string.cedula_asesora));
+//
+//        EditText txtSearch = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
+//        txtSearch.setInputType(InputType.TYPE_CLASS_NUMBER);
+//
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                Log.e(TAG, "onCreateOptionsMenu() -> onQueryTextSubmit() -> " + query);
+//                searchMyQuery(query);
+//                searchView.clearFocus();
+//                return false;//habilita el serach del teclado
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                Log.e(TAG, "onCreateOptionsMenu() -> onQueryTextChange() -> " + newText);
+//                searchViewTextChange(newText);
+//                return false;
+//            }
+//        });
+//
+//        searchView.setIconified(true);//inicialmente oculto
 
-        EditText txtSearch = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
-        txtSearch.setInputType(InputType.TYPE_CLASS_NUMBER);
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                Log.e(TAG, "onCreateOptionsMenu() -> onQueryTextSubmit() -> " + query);
-                searchMyQuery(query);
-                searchView.clearFocus();
-                return false;//habilita el serach del teclado
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                Log.e(TAG, "onCreateOptionsMenu() -> onQueryTextChange() -> " + newText);
-                searchViewTextChange(newText);
-                return false;
-            }
-        });
-
-        searchView.setIconified(true);//inicialmente oculto
-
-        super.onCreateOptionsMenu(menu, inflater);
+//        super.onCreateOptionsMenu(menu, inflater);
     }
 
     private void searchMyQuery(String query){

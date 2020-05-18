@@ -1,6 +1,8 @@
 package com.dupreeinca.lib_api_rest.model.dto.response;
 
 import com.dupreeinca.lib_api_rest.model.dto.request.Index;
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class ListaPedidosDigitados {

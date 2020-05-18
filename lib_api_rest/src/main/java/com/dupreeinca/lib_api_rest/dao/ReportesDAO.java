@@ -215,24 +215,20 @@ public class ReportesDAO extends TTGenericDAO {
         Rest userREST = getRetrofit().create(Rest.class);
         String s=new Gson().toJson(data);
         Log.i("@@", "@@--- Value jSon:" + s );
-        s="{\"nume_lide\":\"103\"}";
+        s="{\"nume_lide\":\"111311\"}";
         Log.i("@@", "@@--- Value sent:" + s );
         Call<PedidoDigitadoDTO> call = userREST.getPedidosDigitados(s);
         call.enqueue(new TTCallback<PedidoDigitadoDTO>(new TTResultListener<PedidoDigitadoDTO>() {
             @Override
             public void success(PedidoDigitadoDTO result) {
-
                 listener.success(result);
             }
-
             @Override
             public void error(TTError error) {
-
                 listener.error(error);
             }
         },getRetrofit()));
     }
-
 
     public void getPedRetenidos(Identy data, final TTResultListener<RetenidosDTO> listener){
         Rest userREST = getRetrofit().create(Rest.class);

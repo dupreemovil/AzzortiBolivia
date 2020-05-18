@@ -134,6 +134,8 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 navigationView.getMenu().findItem(R.id.incorporaciones).setVisible(false);
                 //navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(true);
 //                navigationView.getMenu().findItem(R.id.menu_lat_cupo_saldo_conf).setVisible(false);
+
+                navigationView.getMenu().findItem(R.id.menu_lat_pedid_digitado).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_pedidos_ret).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_edo_pedido).setVisible(false);
 
@@ -150,6 +152,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 navigationView.getMenu().findItem(R.id.incorporaciones).setVisible(false);
                 //navigationView.getMenu().findItem(R.id.menu_lat_redimir_incentivos).setVisible(false);
 //                navigationView.getMenu().findItem(R.id.menu_lat_cupo_saldo_conf).setVisible(false);
+                navigationView.getMenu().findItem(R.id.menu_lat_pedid_digitado).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_pedidos_ret).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_edo_pedido).setVisible(false);
 
