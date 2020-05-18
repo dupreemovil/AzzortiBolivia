@@ -193,7 +193,6 @@ public class HacerPedidoFragment extends TabManagerFragment implements BasePedid
         searchView.setQueryHint(getString(R.string.ingresar_codigo));
 
         EditText txtSearch = searchView.findViewById(android.support.v7.appcompat.R.id.search_src_text);
-        //txtSearch.setInputType(InputType.TYPE_CLASS_NUMBER);
         txtSearch.setInputType(InputType.TYPE_CLASS_TEXT);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {

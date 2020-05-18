@@ -62,7 +62,7 @@ public class InputDialog extends DialogFragment {
         input = new EditText(getActivity());
         // Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
         //input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        input.setInputType(InputType.TYPE_CLASS_NUMBER);
+        input.setInputType(InputType.TYPE_CLASS_TEXT);
         input.setTextSize(22);
         input.setHint(placeHolder);
         builder.setView(input);
