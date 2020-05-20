@@ -2,6 +2,8 @@ package com.azzortiBolivia.dupree.mh_fragments_menu.incorporaciones.listado;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -14,6 +16,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.azzortiBolivia.dupree.mh_dialogs.SimpleDialog4Button;
 import com.dupreeinca.lib_api_rest.controller.InscripcionController;
 import com.dupreeinca.lib_api_rest.enums.EnumStatusPreInsc;
 import com.dupreeinca.lib_api_rest.model.base.TTError;
@@ -115,24 +118,21 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
     //MARK: ListPreHolder.Events
     @Override
     public void onClickRoot(Preinscripcion dataRow, int row) {
+//        showAlertDialogButtonClicked();
+        nameSelected = dataRow.getNombre() + " " + dataRow.getApellido();
+        identySelected = dataRow.getCedula();
         if(row>-1 && row<list.size()) {
             if (dataRow.getEstado().equals(EnumStatusPreInsc.AUTORIZADO.getKey())) {
-                nameSelected = dataRow.getNombre() + " " + dataRow.getApellido();
-                identySelected = dataRow.getCedula();
                 formato_direccion = dataRow.getFormato_direccion();
-
                 testInscription(nameSelected,dataRow.getEstado());
                 //si es gerente de zona, el etado es pendiente y fue realizada por una LIDER, la Z debe aprobar.
             } else if(dataRow.getEstado().equals(EnumStatusPreInsc.PENDIENTE.getKey())
                     && perfil.getPerfil().equals(Profile.GERENTE_ZONA) && dataRow.getUsuario().equals(Profile.LIDER)){
-                identySelected = dataRow.getCedula();
-                testPreInscription(dataRow.getNombre() + " " + dataRow.getApellido(), row);
-            }else if(dataRow.getEstado().equals(EnumStatusPreInsc.RECHAZADO.getKey())) {
-                nameSelected = dataRow.getNombre() + " " + dataRow.getApellido();
-                identySelected = dataRow.getCedula();
-                formato_direccion = dataRow.getFormato_direccion();
 
-                testEditInscription(nameSelected,dataRow.getEstado());
+                testPreInscription(nameSelected, row,dataRow.getEstado());
+            }else if(dataRow.getEstado().equals(EnumStatusPreInsc.RECHAZADO.getKey())) {
+                formato_direccion = dataRow.getFormato_direccion();
+                testEditInscription(  nameSelected,  dataRow.getEstado());
                 //msgToast("Esta preinscripción se encuentra " + dataRow.getEstado());
             }
         }
@@ -222,34 +222,45 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
         simpleDialog.show(getChildFragmentManager(),"mDialog");
     }
 
-
-    public void testPreInscription(String to, int row){
-        SimpleDialog3Button simpleDialog = new SimpleDialog3Button();
+    public void testPreInscription(String to, int row, String estado){
+        SimpleDialog4Button simpleDialog = new SimpleDialog4Button();
         simpleDialog.loadData(getString(R.string.approve_preinscription), getString(R.string.desea_aprobar_preinscription)+" "+to+"?",getString(R.string.aprobar), getString(R.string.rechazar));
-        simpleDialog.setListener(new SimpleDialog3Button.ListenerResult() {
+        simpleDialog.setListener(new SimpleDialog4Button.ListenerResult() {
             @Override
-            public void result(boolean status) {
+            public void result(String status) {
                 showProgress();
-                inscripcionController.aprobarPreinscripcion(new ApprovePreIns(identySelected, status ? ApprovePreIns.APROBAR : ApprovePreIns.RECHAZAR), new TTResultListener<GenericDTO>() {
-                    @Override
-                    public void success(GenericDTO result) {
+                switch (status){
+                    case "Aprobar":
+                    case "Rechazar":
+                        inscripcionController.aprobarPreinscripcion(new ApprovePreIns(identySelected, status.equals("Aprobar") ? ApprovePreIns.APROBAR : ApprovePreIns.RECHAZAR), new TTResultListener<GenericDTO>() {
+                            @Override
+                            public void success(GenericDTO result) {
+                                dismissProgress();
+                                String msg = result.getResult();
+                                if(msg != null){
+                                    msgToast(msg);
+                                    refreshList(msg, row);
+                                }
+                            }
+                            @Override
+                            public void error(TTError error) {
+                                dismissProgress();
+                                checkSession(error);
+                            }
+                        });
+                        break;
+                    case "Editar":
                         dismissProgress();
-
-                        String msg = result.getResult();
-                        if(msg != null){
-                            msgToast(msg);
-                            refreshList(msg, row);
-                        }
-                    }
-
-                    @Override
-                    public void error(TTError error) {
+                        gotoInscripcion(false,estado);
+                        break;
+                    case "Cancelar":
                         dismissProgress();
-                        checkSession(error);
-                    }
-                });
+                        break;
+                }
+
             }
         });
+
         simpleDialog.show(getChildFragmentManager(),"mDialog");
     }
 
@@ -264,10 +275,10 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
 
         adapter_listPre.notifyDataSetChanged();
     }
-    void enableInscriptions(){
+    void enableInscriptions(){//@@
 
         for (Preinscripcion p: list) {
-            p.setEstado("AUTORIZADO");
+            p.setEstado("PENDIENTE");
 
         }
     }
