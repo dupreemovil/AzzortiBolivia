@@ -393,7 +393,7 @@
                                 <EditText
                                     android:onClick="@{(v) -> callback.onClick(v)}"
                                     bind:isEnable="@{model.refValidated}"
-                                    android:text="@={model.tipo_via_env_1}"
+                                    android:text="@={model.nomb_vere}"
                                     android:id="@+id/txt_spn_tipo_via_env_1"
                                     android:focusableInTouchMode="false"
                                     android:layout_marginTop="8dp"
@@ -481,7 +481,7 @@
                                 <EditText
                                     android:onClick="@{(v) -> callback.onClick(v)}"
                                     bind:isEnable="@{model.refValidated}"
-                                    android:text="@={model.tipo_via_env_2}"
+                                    android:text="@={model.vere_entr}"
                                     android:id="@+id/txt_spn_tipo_via_env_2"
                                     android:focusableInTouchMode="false"
                                     android:layout_marginTop="8dp"

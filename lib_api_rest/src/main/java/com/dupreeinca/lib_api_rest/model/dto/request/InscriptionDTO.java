@@ -4,7 +4,6 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.text.TextUtils;
 
 import com.dupreeinca.lib_api_rest.BR;
 import com.dupreeinca.lib_api_rest.enums.EnumFormatDireccion;
@@ -29,17 +28,16 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
 
     //DATOS PERSONALES
     private String cedula = "";//
-    private String extension;
+
     private transient String nombre = "";//
     private transient String id_sexo = "";//
-    private transient String sexo = "";//
     private String nacimiento = "";//
     private String zona_seccion = "";//
-    private String sector = "";//
+
     //DIRECCION DERESIDENCIA
     private String direccion_concatenada = "";//
 
-    private String tipo_via1 = "";//
+    private String empr_cony = "";//
     private String tipo_via2 = "";//
 
     private String numero1 = "";//
@@ -74,8 +72,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
 
     private String direccion_concatenada_env = "";//
 
-    private String tipo_via_env_1 = "";//
-    private String tipo_via_env_2 = "";//
+    private String nomb_vere = "";//
+    private String vere_entr = "";//
 
     private String numero_env_1 = "";//
     private String numero_env_2 = "";//
@@ -156,14 +154,12 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     protected InscriptionDTO(Parcel in) {
         referenciado_por = in.readString();
         cedula = in.readString();
-        extension=in.readString();
         id_sexo=in.readString();
-        sexo=in.readString();
         nacimiento = in.readString();
         zona_seccion = in.readString();
-        sector=in.readString();
+
         direccion_concatenada = in.readString();
-        tipo_via1 = in.readString();
+        empr_cony = in.readString();
         tipo_via2 = in.readString();
         numero1 = in.readString();
         numero2 = in.readString();
@@ -185,8 +181,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         barrio = in.readString();
         id_barrio = in.readString();
         direccion_concatenada_env = in.readString();
-        tipo_via_env_1 = in.readString();
-        tipo_via_env_2 = in.readString();
+        nomb_vere = in.readString();
+        vere_entr = in.readString();
         numero_env_1 = in.readString();
         numero_env_2 = in.readString();
         numero_env_3 = in.readString();
@@ -224,14 +220,12 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(referenciado_por);
         dest.writeString(cedula);
-        dest.writeString(extension);
         dest.writeString(id_sexo);
-        dest.writeString(sexo);
         dest.writeString(nacimiento);
         dest.writeString(zona_seccion);
-        dest.writeString(sector);
+
         dest.writeString(direccion_concatenada);
-        dest.writeString(tipo_via1);
+        dest.writeString(empr_cony);
         dest.writeString(tipo_via2);
         dest.writeString(numero1);
         dest.writeString(numero2);
@@ -253,8 +247,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         dest.writeString(barrio);
         dest.writeString(id_barrio);
         dest.writeString(direccion_concatenada_env);
-        dest.writeString(tipo_via_env_1);
-        dest.writeString(tipo_via_env_2);
+        dest.writeString(nomb_vere);
+        dest.writeString(vere_entr);
         dest.writeString(numero_env_1);
         dest.writeString(numero_env_2);
         dest.writeString(numero_env_3);
@@ -316,12 +310,12 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         //setNombre(data.getNombre());
         setNacimiento(data.getNacimiento());
         setZona_seccion(data.getZona_seccion());
-        setSector(data.getSector());
+
 
         //DIRECCION DE RESIDENCIA
         setDireccion_concatenada("");// hace automatico
 
-        setTipo_via1(data.getTipo_via1());
+        setEmpr_cony(data.getEmpr_cony());
         setTipo_via2(data.getTipo_via2());
 
         setNumero1(data.getNumero1());
@@ -358,8 +352,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
 
         setDireccion_concatenada_env("");//se hace automatico
 
-        setTipo_via_env_1(data.getTipo_via_env_1());
-        setTipo_via_env_2(data.getTipo_via_env_2());
+        setNomb_vere(data.getNomb_vere());
+        setVere_entr(data.getVere_entr());
 
         setNumero_env_1(data.getNumero_env_1());
         setNumero_env_2(data.getNumero_env_2());
@@ -441,7 +435,6 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         //DATOS PERSONALES
         setCedula("");
         setId_Sexo("");
-        setSexo("");
         setNombre("");
         setNacimiento("");
         setZona_seccion("");
@@ -449,7 +442,7 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         //DIRECCION DE RESIDENCIA
         setDireccion_concatenada("");
 
-        setTipo_via1("");
+        setEmpr_cony("");
         setTipo_via2("");
 
         setNumero1("");
@@ -483,8 +476,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         setSpnDirEnvio("");//control
         setDireccion_concatenada_env("");
 
-        setTipo_via_env_1("");
-        setTipo_via_env_2("");
+        setNomb_vere("");
+        setVere_entr("");
 
         setNumero_env_1("");
         setNumero_env_2("");
@@ -557,16 +550,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     }
 
     @Bindable
-    public String getExtension() {return extension;}
-
-    @Bindable
     public String getNacimiento() {
         return nacimiento;
-    }
-
-    @Bindable
-    public String getSector() {
-        return sector;
     }
 
 
@@ -578,8 +563,8 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     }
 
     @Bindable
-    public String getTipo_via1() {
-        return tipo_via1;
+    public String getEmpr_cony() {
+        return empr_cony;
     }
 
     @Bindable
@@ -670,23 +655,13 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     public String getDireccion_concatenada() {
 
         if (formato_direccion.equals(EnumFormatDireccion.FORMATO_1.getKey())) {
-            direccion_concatenada =
-                    (tipo_via1 + " ") +
-                            (numero1 + " ") +
-                            (letra1 + " ") +
-                            (bis1 + " ") +
-                            (letra2 + " ") +
-                            (pcardinal1 + " ") +
-                            (numero2 + " ") +
-                            (letra3 + " ") +
-                            (numero3 + " ") +
-                            (pcardinal2 + " ") +
-                            (complemento);
+            direccion_concatenada = (complemento + " ") +
+                    (numero1 + " ") +  ( nomb_vere +" ") + (empr_cony);
         }
 
         if (formato_direccion.equals(EnumFormatDireccion.FORMATO_2.getKey())) {
             direccion_concatenada =
-                    (tipo_via1 + " ") +
+                    (empr_cony + " ") +
                             (numero1 + " ") +
                             (bis1 + " ") +
                             (letra1 + " ") +
@@ -780,19 +755,15 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         return id_sexo;
     }
 
+
     @Bindable
-    public String getSexo() {
-        return sexo;
+    public String getNomb_vere() {
+        return nomb_vere;
     }
 
     @Bindable
-    public String getTipo_via_env_1() {
-        return tipo_via_env_1;
-    }
-
-    @Bindable
-    public String getTipo_via_env_2() {
-        return tipo_via_env_2;
+    public String getVere_entr() {
+        return vere_entr;
     }
 
 
@@ -868,21 +839,15 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     @Bindable
     public String getDireccion_concatenada_env() {
         if(formato_direccion.equals(EnumFormatDireccion.FORMATO_1.getKey())) {
-            direccion_concatenada_env = tipo_via_env_1 + " " +
+            direccion_concatenada_env = complemento_env + " " +
                     (numero_env_1 + " ") +
-                    (letra_env_1 + " ") +
-                    (bis_env_1 + " ") +
-                    (letra_env_2 + " ") +
-                    (pcardinal_env_1 + " ") +
-                    (numero_env_2 + " ") +
-                    (letra_env_3 + " ") +
-                    (pcardinal_env_2 + " ") +
-                    complemento_env;
+                    (vere_entr + " ") ;
+
         }
 
         if (formato_direccion.equals(EnumFormatDireccion.FORMATO_2.getKey())) {
             direccion_concatenada =
-                    (tipo_via_env_1 + " ") +
+                    (nomb_vere + " ") +
                             (numero_env_1 + " ") +
                             (bis_env_1 + " ") +
                             (letra_env_1 + " ") +
@@ -1042,10 +1007,6 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         this.cedula = cedula;
         notifyPropertyChanged(BR.cedula);
     }
-    public void setExtension(String extension) {
-        this.extension = extension;
-        notifyPropertyChanged(BR.extension);
-    }
 
     public void setImg_cedula(List<String> img_cedula) {
         this.img_cedula = img_cedula;
@@ -1077,11 +1038,6 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         notifyPropertyChanged(BR.id_sexo);
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-        notifyPropertyChanged(BR.sexo);
-    }
-
 
     public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
@@ -1094,13 +1050,9 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         notifyPropertyChanged(BR.zona_seccion);
     }
 
-    public void setSector(String sector) {
-        this.sector = sector;
-        notifyPropertyChanged(BR.sector);
-    }
 
-    public void setTipo_via1(String tipo_via1) {
-        this.tipo_via1 = tipo_via1;
+    public void setEmpr_cony(String empr_cony) {
+        this.empr_cony = empr_cony;
         notifyPropertyChanged(BR.tipo_via1);
         notifyPropertyChanged(BR.direccion_concatenada);
     }
@@ -1114,7 +1066,6 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
     public void setNumero1(String numero1) {
         this.numero1 = numero1;
         notifyPropertyChanged(BR.numero1);
-        notifyPropertyChanged(BR.enableLetra1);
         notifyPropertyChanged(BR.direccion_concatenada);
     }
 
@@ -1219,15 +1170,15 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         notifyPropertyChanged(BR.id_barrio);
     }
 
-    public void setTipo_via_env_1(String tipo_via_env_1) {
-        this.tipo_via_env_1 = tipo_via_env_1;
-        notifyPropertyChanged(BR.tipo_via_env_1);
-        notifyPropertyChanged(BR.direccion_concatenada_env);
+    public void setNomb_vere(String nomb_vere) {
+        this.nomb_vere = nomb_vere;
+        notifyPropertyChanged(BR.nomb_vere);
+        notifyPropertyChanged(BR.direccion_concatenada);
     }
 
-    public void setTipo_via_env_2(String tipo_via_env_2) {
-        this.tipo_via_env_2 = tipo_via_env_2;
-        notifyPropertyChanged(BR.tipo_via_env_2);
+    public void setVere_entr(String vere_entr) {
+        this.vere_entr = vere_entr;
+        notifyPropertyChanged(BR.vere_entr);
         notifyPropertyChanged(BR.direccion_concatenada_env);
     }
 

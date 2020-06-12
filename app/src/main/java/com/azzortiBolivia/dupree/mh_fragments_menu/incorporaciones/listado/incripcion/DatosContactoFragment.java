@@ -69,7 +69,7 @@ public class DatosContactoFragment extends BaseFragment implements View.OnClickL
         binding.imgServicios.setEnabled(true);
         binding.imgServicios.setOnClickListener(null);
         binding.imgServicios.setVisibility(View.VISIBLE);
-        binding.linearImgServicios.setVisibility(View.VISIBLE);
+
 
         binding.txtEmail.addTextChangedListener(new TextWatcher() {
             @Override

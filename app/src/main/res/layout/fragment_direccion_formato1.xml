@@ -61,227 +61,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_marginTop="8dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
 
-                        <!--<android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.35"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.tipo_via1}"
-                                android:id="@+id/txt_spn_tipo_via1"
-                                android:focusableInTouchMode="false"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/tipo_via"/>
-                        </android.support.design.widget.TextInputLayout>-->
-
-                        <!--<android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.35"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.numero1}"
-                                android:maxLength="6"
-                                android:digits="@string/only_letter_and_numer_basic"
-                                android:id="@+id/txt_numero1"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/numero"/>
-                        </android.support.design.widget.TextInputLayout>-->
-
-                       <!-- <android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.3"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated &amp; model.enableLetra1}"
-                                android:text="@={model.letra1}"
-                                android:id="@+id/txt_spn_letra1"
-                                android:focusableInTouchMode="false"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/letra"/>
-                        </android.support.design.widget.TextInputLayout>-->
-                    </LinearLayout>
-                    <!--<LinearLayout
-                        android:layout_marginTop="8dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingStart="12dp"
-                        android:paddingEnd="12dp"
-                        android:orientation="horizontal"
-                        android:weightSum="1">
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.15"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.bis1}"
-                                android:id="@+id/txt_spn_bis1"
-                                android:focusableInTouchMode="false"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/bis"/>
-                        </android.support.design.widget.TextInputLayout>
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.25"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.letra2}"
-                                android:id="@+id/txt_spn_letra2"
-                                android:focusableInTouchMode="false"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/letra"/>
-                        </android.support.design.widget.TextInputLayout>
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="4dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_weight="0.4">
-
-                            <EditText
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.pcardinal1}"
-                                android:id="@+id/txt_spn_pcardinal1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:focusableInTouchMode="false"
-                                android:hint="@string/sur_este" />
-                        </android.support.design.widget.TextInputLayout>
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_width="0dp"
-                            android:layout_height="52dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_weight="0.2">
-                            <TextView
-                                android:id="@+id/textView"
-                                android:layout_width="38dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="4dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginEnd="4dp"
-                                android:text="@string/separador"
-                                android:textSize="30dp" />
-                        </android.support.design.widget.TextInputLayout>
-
-                    </LinearLayout>-->
-                    <!--<LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal"
-                        android:paddingEnd="12dp"
-                        android:paddingStart="12dp"
-                        android:weightSum="1">
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.35"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.numero2}"
-                                android:digits="@string/only_number_basic"
-                                android:id="@+id/txt_numero2"
-                                android:maxLength="6"
-                                android:inputType="number"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/numero"/>
-                        </android.support.design.widget.TextInputLayout>
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.3"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.letra3}"
-                                android:id="@+id/txt_spn_letra3"
-                                android:focusableInTouchMode="false"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/letra"/>
-                        </android.support.design.widget.TextInputLayout>
-
-                        <android.support.design.widget.TextInputLayout
-                            android:layout_marginTop="8dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="4dp"
-                            android:layout_width="0dp"
-                            android:layout_weight="0.35"
-                            android:layout_height="wrap_content">
-                            <EditText
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.numero3}"
-                                android:digits="@string/only_number_basic"
-                                android:id="@+id/txt_numero3"
-                                android:maxLength="6"
-                                android:inputType="number"
-                                android:layout_marginTop="8dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/numero"/>
-                        </android.support.design.widget.TextInputLayout>
-
-                    </LinearLayout>-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -291,27 +71,6 @@
                         android:paddingEnd="12dp"
                         android:paddingStart="12dp"
                         android:weightSum="1">
-
-                        <!--<android.support.design.widget.TextInputLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="4dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginTop="8dp"
-                            android:layout_weight="0.3">
-
-                            <EditText
-                                android:onClick="@{(v) -> callback.onClick(v)}"
-                                bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.pcardinal2}"
-                                android:id="@+id/txt_spn_pcardinal2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:focusableInTouchMode="false"
-                                android:hint="@string/sur_este" />
-                        </android.support.design.widget.TextInputLayout>-->
-
 
                         <android.support.design.widget.TextInputLayout
                             android:layout_width="0dp"
@@ -332,6 +91,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
+                                android:maxLength="65"
                                 android:hint="@string/direccion_1" />
                         </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
@@ -351,17 +111,18 @@
                             android:layout_marginTop="8dp"
                             android:layout_weight="1.0">
 
-                            <EditText
+                            .<EditText
                                 android:ellipsize="end"
                                 android:maxLines="1"
                                 android:lines="1"
                                 bind:isEnable="@{model.refValidated}"
-                                android:text="@{model.numero1}"
+                                android:text="@={model.numero1}"
                                 android:digits="@string/only_letter_and_numer_basic"
                                 android:id="@+id/txt_numeroDireccion"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
+                                android:maxLength="40"
                                 android:hint="@string/numero" />
                         </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
@@ -387,12 +148,13 @@
                                 android:maxLines="1"
                                 android:lines="1"
                                 bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.tipo_via_env_1}"
+                                android:text="@={model.nomb_vere}"
                                 android:digits="@string/only_letter_and_numer_basic"
                                 android:id="@+id/txt_tipoVia"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
+                                android:maxLength="65"
                                 android:hint="@string/interseccion" />
                         </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
@@ -417,12 +179,13 @@
                                 android:maxLines="1"
                                 android:lines="1"
                                 bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.tipo_via1}"
+                                android:text="@={model.empr_cony}"
                                 android:digits="@string/only_letter_and_numer_basic"
                                 android:id="@+id/txtReferencia"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
+                                android:maxLength="65"
                                 android:hint="@string/referencia" />
                         </android.support.design.widget.TextInputLayout>
                     </LinearLayout>
@@ -552,10 +315,12 @@
                                     android:text="@={model.complemento_env}"
                                     android:id="@+id/txt_spn_tipo_via_env_1"
                                     android:inputType="text"
+                                    android:digits="@string/only_letter_and_numer_basic"
                                     android:focusable="true"
                                     android:layout_marginTop="8dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:maxLength="32"
                                     android:hint="@string/direccion"/>
                             </android.support.design.widget.TextInputLayout>
                         </LinearLayout>
@@ -579,7 +344,10 @@
                                     bind:isEnable="@{model.refValidated}"
                                     android:text="@={model.numero_env_1}"
                                     android:id="@+id/txt_spn_bis_env_1"
-
+                                    android:maxLength="40"
+                                    android:maxLines="1"
+                                    android:inputType="text"
+                                    android:digits="@string/only_letter_and_numer_basic"
                                     android:layout_marginTop="8dp"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
@@ -608,8 +376,9 @@
                                     android:ellipsize="end"
                                     android:maxLines="1"
                                     android:lines="1"
+                                    android:maxLength="65"
                                     bind:isEnable="@{model.refValidated}"
-                                    android:text="@={model.tipo_via_env_2}"
+                                    android:text="@={model.vere_entr}"
                                     android:digits="@string/only_letter_and_numer_basic"
                                     android:id="@+id/txt_complemento_env"
                                     android:layout_width="match_parent"

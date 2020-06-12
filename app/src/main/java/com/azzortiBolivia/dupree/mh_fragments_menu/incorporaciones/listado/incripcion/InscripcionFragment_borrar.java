@@ -357,7 +357,7 @@ public class InscripcionFragment_borrar extends BaseFragment {
                     break;
 
                 case R.id.txt_spn_tipo_via_env_1://
-                    showList(ListString.BROACAST_REG_TYPE_VIA_2, getString(R.string.tipo_via), listTipoVia, model.getTipo_via_env_1());
+                    showList(ListString.BROACAST_REG_TYPE_VIA_2, getString(R.string.tipo_via), listTipoVia, model.getNomb_vere());
                     break;
                 case R.id.txt_spn_letra_env_1://
                     showList(ListString.BROACAST_REG_TYPE_LETRA1_2, getString(R.string.letra), listLetra, model.getLetra_env_1());

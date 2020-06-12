@@ -171,7 +171,7 @@ public class DirFormato3Fragment extends BaseFragment implements View.OnClickLis
                 showList(view.getId(), getString(R.string.direccion_de_envio_pedido), listDirSend, model.getSpnDirEnvio());
                 break;
             case R.id.txt_spn_tipo_via_env_1://
-                showList(view.getId(), getString(R.string.tipo_via), listTipoVia, model.getTipo_via_env_1());
+                showList(view.getId(), getString(R.string.tipo_via), listTipoVia, model.getNomb_vere());
                 break;
             case R.id.txt_spn_letra_env_1://
                 showList(view.getId(), getString(R.string.letra), listLetra, model.getLetra_env_1());
@@ -229,7 +229,7 @@ public class DirFormato3Fragment extends BaseFragment implements View.OnClickLis
             return false;
         }*/
 
-        if (!model.getTipo_via1().toUpperCase().equals("Otro".toUpperCase()))
+        if (!model.getEmpr_cony().toUpperCase().equals("Otro".toUpperCase()))
         {
            /* if(model.getNumero1().isEmpty()){
                 msgToast("Dir. Res. > Número 1... Verifique");
@@ -243,7 +243,7 @@ public class DirFormato3Fragment extends BaseFragment implements View.OnClickLis
             }*/
         }
 
-        if (model.getTipo_via1().toUpperCase().equals("Otro".toUpperCase()))
+        if (model.getEmpr_cony().toUpperCase().equals("Otro".toUpperCase()))
         {
             if(model.getComplemento().isEmpty()){
                 msgToast("Dir. Res. > Datos adicionales...");
@@ -281,13 +281,13 @@ public class DirFormato3Fragment extends BaseFragment implements View.OnClickLis
         Validate valid = new Validate();
         //DIRECCION DE ENVIO
         if (model.isShowDirEnvio()) {
-            if (model.getTipo_via_env_1().isEmpty()) {
+            if (model.getNomb_vere().isEmpty()) {
                 msgToast("Dir. Envío > Tipo de vía... Verifique");
                 valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtSpnTipoViaEnv1);
                 return false;
             }
 
-            if (!model.getTipo_via_env_1().toUpperCase().equals("Otro".toUpperCase())) {
+            if (!model.getNomb_vere().toUpperCase().equals("Otro".toUpperCase())) {
                 if (model.getNumero_env_1().isEmpty()) {
                     msgToast("Dir. Envío > Número 1... Verifique");
                     valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroEnv1);
@@ -300,7 +300,7 @@ public class DirFormato3Fragment extends BaseFragment implements View.OnClickLis
                 }
             }
 
-            if (model.getTipo_via_env_1().toUpperCase().equals("Otro".toUpperCase())) {
+            if (model.getNomb_vere().toUpperCase().equals("Otro".toUpperCase())) {
                 if (model.getComplemento_env().isEmpty()) {
                     msgToast("Dir. Envío > Datos adicionales...");
                     valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtComplementoEnv);
@@ -370,7 +370,7 @@ public class DirFormato3Fragment extends BaseFragment implements View.OnClickLis
 
                     case R.id.txt_spn_tipo_via_env_1:
                         binding.txtSpnTipoViaEnv1.setError(null);
-                        model.setTipo_via_env_1(item.getName());
+                        model.setNomb_vere(item.getName());
                         break;
                     case R.id.txt_spn_letra_env_1:
                         binding.txtSpnLetraEnv1.setError(null);

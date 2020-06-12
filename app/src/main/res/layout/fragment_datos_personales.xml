@@ -186,7 +186,7 @@
                             <EditText
                                 android:onClick="@{(v)->callback.onClick(v)}"
                                 bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.extension}"
+                                android:text="@={model.letra1}"
                                 android:digits="@string/only_letter_basic"
                                 android:maxLength="6"
                                 android:inputType="text"
@@ -289,7 +289,7 @@
                         <EditText
                             bind:isEnable="@{model.refValidated}"
                             android:onClick="@{(v)->callback.onClick(v)}"
-                            android:text="@={model.sexo}"
+                            android:text="@={model.letra2}"
                             android:id="@+id/txtSexo"
                             android:focusableInTouchMode="false"
                             android:layout_marginTop="8dp"
@@ -312,7 +312,7 @@
                                 bind:isEnable="@{model.refValidated}"
                                 android:text="@={model.zona_seccion}"
                                 android:digits="@string/only_number_basic"
-                                android:maxLength="6"
+                                android:maxLength="3"
                                 android:inputType="number"
                                 android:id="@+id/txtZone"
                                 android:layout_marginTop="8dp"
@@ -329,9 +329,9 @@
                             android:layout_height="wrap_content">
                             <EditText
                                 bind:isEnable="@{model.refValidated}"
-                                android:text="@={model.sector}"
+                                android:text="@={model.letra3}"
                                 android:digits="@string/only_number_basic"
-                                android:maxLength="6"
+                                android:maxLength="3"
                                 android:inputType="number"
                                 android:id="@+id/txtSector"
                                 android:layout_marginTop="8dp"

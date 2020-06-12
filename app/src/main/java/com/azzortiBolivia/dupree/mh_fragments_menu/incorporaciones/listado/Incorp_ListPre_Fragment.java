@@ -230,7 +230,7 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
             public void result(String status) {
                 showProgress();
                 switch (status){
-                    case "Aprobar":
+                    case "Aprobar"://@@aprobar
                     case "Rechazar":
                         inscripcionController.aprobarPreinscripcion(new ApprovePreIns(identySelected, status.equals("Aprobar") ? ApprovePreIns.APROBAR : ApprovePreIns.RECHAZAR), new TTResultListener<GenericDTO>() {
                             @Override
@@ -270,7 +270,7 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
         list.clear();
         if(result.getResult()!=null) {
             list.addAll(result.getResult());
-            enableInscriptions();//@@
+//            enableInscriptions();//@@
         }
 
         adapter_listPre.notifyDataSetChanged();
@@ -278,7 +278,7 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
     void enableInscriptions(){//@@
 
         for (Preinscripcion p: list) {
-            p.setEstado("PENDIENTE");
+            p.setEstado("RECHAZADO");
 
         }
     }

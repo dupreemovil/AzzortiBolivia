@@ -410,8 +410,8 @@
     <string name="edo_pedido">Pedido</string>
     <string name="cedula_frontal">Cédula Frontal</string>
     <string name="cedula_adverso">Cédula Reverso</string>
-    <string name="pagare_frontal">Pagaré</string>
-    <string name="pagare_adverso">Pagaré Adverso</string>
+    <string name="pagare_frontal">Contrato</string>
+    <string name="pagare_adverso">Contrato Adverso</string>
     <string name="bandeja_de_entrada">Bandeja de entrada</string>
     <string name="telefono_de_contacto">Telefono de contacto</string>
     <string name="catalogos_de_premios">Catálogos de premios</string>

@@ -201,7 +201,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
         model.setCedula(data.getCedula().isEmpty() ? Incorp_ListPre_Fragment.identySelected : data.getCedula());
         model.setNombre(data.getNombre().isEmpty() ? Incorp_ListPre_Fragment.nameSelected : data.getNombre());//se redunda xq a veces no llega
 
-        model.setSexo("Femenino");
+        model.setLetra2("Femenino");
         model.setFormato_direccion(data.getFormato_direccion());
         model.setModeEdit(data.isModeEdit());
 
@@ -258,7 +258,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
             case R.id.txtCIExtension:
                 if(listCIExtension!=null){
                     String titleToShow=getString(R.string.extension);
-                    String sm=model.getExtension();
+                    String sm=model.getLetra1();
                     int i=v.getId();
                     showList(i, titleToShow, listCIExtension, sm);
                 }
@@ -267,7 +267,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
             case R.id.txtSexo://
                 if(listSexo!=null){
                     String s=getString(R.string.sexo);
-                    String sm=model.getSexo();
+                    String sm=model.getLetra2();
                     int i=v.getId();
                     showList(i, s, listSexo, sm);
                 }
@@ -299,11 +299,11 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
                 switch(id){
                     case R.id.txtSexo:
                         binding.txtSexo.setError(null);
-                        model.setSexo(item.getName());
+                        model.setLetra2(item.getName());
                         break;
                     case R.id.txtCIExtension:
                         binding.txtCIExtension.setError(null);
-                        model.setExtension(item.getName());
+                        model.setLetra1(item.getName());
                         break;
                 }
             }
@@ -313,7 +313,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
 
     private void clearSexo(){
         listSexo=null;
-        model.setSexo("");
+        model.setLetra2("");
     }
 
 
