@@ -231,6 +231,7 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
                 showProgress();
                 switch (status){
                     case "Aprobar"://@@aprobar
+
                     case "Rechazar":
                         inscripcionController.aprobarPreinscripcion(new ApprovePreIns(identySelected, status.equals("Aprobar") ? ApprovePreIns.APROBAR : ApprovePreIns.RECHAZAR), new TTResultListener<GenericDTO>() {
                             @Override
@@ -251,7 +252,7 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
                         break;
                     case "Editar":
                         dismissProgress();
-                        gotoInscripcion(false,estado);
+                        gotoInscripcion(true,estado);
                         break;
                     case "Cancelar":
                         dismissProgress();

@@ -306,7 +306,7 @@ public class HacerPrePedidoFragment extends TabManagerFragment implements BasePe
                         NumberFormat formatter = NumberFormat.getInstance(Locale.US);
 
                         String  msg = "Total: "
-                                .concat("USD".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
+                                .concat("Bs. ".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
                                 .concat(". ")
                                 .concat(result.getMensaje());
 
@@ -320,7 +320,7 @@ public class HacerPrePedidoFragment extends TabManagerFragment implements BasePe
                         NumberFormat formatter = NumberFormat.getInstance(Locale.US);
 
                         String  msg = "Total: "
-                                .concat("USD".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
+                                .concat("Bs.".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
                                 .concat(". ")
                                 .concat(result.getMensaje());
 
@@ -751,7 +751,7 @@ public class HacerPrePedidoFragment extends TabManagerFragment implements BasePe
         Log.e(TAG, "Update Total: "+total_pedido);
 
         NumberFormat formatter = NumberFormat.getInstance(Locale.US);
-        fabTitle("USD".concat(formatter.format(total_pedido)));
+        fabTitle("Bs.".concat(formatter.format(total_pedido)));
     }
 
     @Override

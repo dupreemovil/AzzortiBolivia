@@ -30,7 +30,7 @@
                     android:layout_margin="0.5dp"
                     card_view:cardCornerRadius="6dp"
                     card_view:cardUseCompatPadding="false"
-
+                    android:visibility="gone"
                     android:layout_weight="0.2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content">
@@ -68,7 +68,7 @@
                     card_view:cardCornerRadius="6dp"
                     card_view:cardUseCompatPadding="false"
                     android:layout_width="0dp"
-                    android:layout_weight="0.6"
+                    android:layout_weight="0.8"
                     android:layout_height="match_parent">
 
                     <LinearLayout

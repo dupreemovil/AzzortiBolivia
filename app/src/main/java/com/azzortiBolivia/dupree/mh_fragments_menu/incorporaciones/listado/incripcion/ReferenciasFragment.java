@@ -223,8 +223,8 @@ public class ReferenciasFragment extends BaseFragment implements View.OnClickLis
                 sendImageMultiPart(model.getCedula_adverso(), R.id.imgCedAdverso);
             } else if(!model.containHttp(model.getPagare_frontal())){
                 sendImageMultiPart(model.getPagare_frontal(), R.id.imgPagFrontal);
-            } else if(!model.containHttp(model.getPagare_adverso())){
-                sendImageMultiPart(model.getPagare_adverso(), R.id.imgPagAdverso);
+//            } else if(!model.containHttp(model.getPagare_adverso())){
+//                sendImageMultiPart(model.getPagare_adverso(), R.id.imgPagAdverso);
             }else if(!model.containHttp(model.getImg_terminos())){
                 sendImageMultiPart(model.getImg_terminos(), R.id.imgServicios);
             } else {

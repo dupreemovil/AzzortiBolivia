@@ -299,7 +299,7 @@ public class HacerPedidoFragment extends TabManagerFragment implements BasePedid
                         NumberFormat formatter = NumberFormat.getInstance(Locale.US);
 
                         String  msg = "Total: "
-                                .concat("USD".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
+                                .concat("Bs.".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
                                 .concat(". ")
                                 .concat(result.getMensaje());
 
@@ -315,7 +315,7 @@ public class HacerPedidoFragment extends TabManagerFragment implements BasePedid
                         NumberFormat formatter = NumberFormat.getInstance(Locale.US);
 
                         String  msg = "Total: "
-                                .concat("USD".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
+                                .concat("Bs.".concat(formatter.format(Float.parseFloat(result.getTotal_pedido()))))
                                 .concat(". ")
                                 .concat(result.getMensaje());
 
@@ -605,19 +605,15 @@ public class HacerPedidoFragment extends TabManagerFragment implements BasePedid
             public void success(EstadoPedidoDTO result) {
                 dismissProgress();
                 resultEdoPedido = result.getResult();
-
                 updateView();
-
                 dataFacturas();
             }
 
             @Override
             public void error(TTError error) {
                 setPageCurrent(PedidosPagerAdapter.PAGE_HISTORICAL);
-
                 dismissProgress();
-                checkSession(error);
-
+                checkSession(error);//@@
                 if(error.getStatusCode() != 404 || error.getStatusCode() != 501) {
                     dataFacturas();
                 }
@@ -806,7 +802,7 @@ public class HacerPedidoFragment extends TabManagerFragment implements BasePedid
         Log.e(TAG, "Update Total: "+total_pedido);
 
         NumberFormat formatter = NumberFormat.getInstance(Locale.US);
-        fabTitle("USD".concat(formatter.format(total_pedido)));
+        fabTitle("Bs.".concat(formatter.format(total_pedido)));
     }
 
     @Override

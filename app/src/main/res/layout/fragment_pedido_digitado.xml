@@ -1,4 +1,12 @@
 <layout>
+    <data>
+        <variable
+            name="callback"
+            type="android.view.View.OnClickListener"/>
+        <variable
+            name="model"
+            type="com.dupreeinca.lib_api_rest.model.dto.request.InscriptionDTO"/>
+    </data>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

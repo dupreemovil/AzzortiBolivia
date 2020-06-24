@@ -435,7 +435,7 @@
     <string name="concat_pagina">Pág. %1$s</string>
     <string name="concat_codigo">Código: %1$s</string>
     <string name="concat_pts">%1$s pts.</string>
-    <string name="concat_dolar">USD %1$s</string>
+    <string name="concat_dolar">Bs. %1$s</string>
     <string name="concat_BS">Bs. %1$s</string>
 
     <string name="concat_cedula">Cédula: %1$s</string>
@@ -447,16 +447,16 @@
     <string name="concat_fecha_registro">F. Registro: %1$s</string>
     <string name="concat_observacion">Observacion: %1$s</string>
     <string name="concat_campana">Campaña: %1$s</string>
-    <string name="concat_precio_total">Valor total: USD %1$s</string>
+    <string name="concat_precio_total">Valor total: Bs. %1$s</string>
     <string name="concat_id_factura">Factura: %1$s</string>
-    <string name="concat_saldo">Saldo: USD %1$s</string>
-    <string name="concat_cupo_credito">"Cupo crédito: USD%1$s</string>
+    <string name="concat_saldo">Saldo: Bs. %1$s</string>
+    <string name="concat_cupo_credito">"Cupo crédito: Bs. %1$s</string>
     <string name="concat_mensajes">"%1$s  Mensajes</string>
     <string name="concat_nombre">Nombre: %1$s</string>
     <string name="concat_producto">Producto: %1$s</string>
     <string name="concat_cantidad_pedida">Cantidad pedida\n%1$s</string>
     <string name="concat_cantidad_despachada">Cantidad despachada\n%1$s</string>
-    <string name="concat_valor">Valor: USD%1$s</string>
+    <string name="concat_valor">Valor: Bs. %1$s</string>
 
 
     <string name="buscar_por_cedula">Buscar por cédula</string>
@@ -484,7 +484,7 @@
     <string name="razon_two_points">Razón:</string>
     <string name="usuario_two_points">Usuario:</string>
     <string name="cedula_two_points">Cédula:</string>
-    <string name="saldo_two_points">Premio:</string>
+    <string name="saldo_two_points">Saldo:</string>
     <string name="no_cambia">No cambia</string>
     <string name="banco_two_points">Banco:</string>
     <string name="valor_two_points">Valor:</string>
@@ -499,10 +499,10 @@
     <string name="minimo_publico_two_points">Minimo público:</string>
     <string name="total_two_points">Total:</string>
     <string name="conferencia_two_points">Conferencia:</string>
-    <string name="concat_efectivos">Efectivos: USD%1$s</string>
-    <string name="concat_redimidos">Redimidos: USD%1$s</string>
-    <string name="concat_disponibles">Disponibles: USD%1$s</string>
-    <string name="concat_pendientes">Pendientes: USD%1$s</string>
+    <string name="concat_efectivos">Efectivos:  Bs. %1$s</string>
+    <string name="concat_redimidos">Redimidos: Bs. %1$s</string>
+    <string name="concat_disponibles">Disponibles:  Bs. %1$s</string>
+    <string name="concat_pendientes">Pendientes: Bs. %1$s</string>
     <string name="error_leyendo_archivo">Error! leyendo el archivo… Intente nuevamente</string>
     <string name="c_i_two_point">C.I.: %1$s</string>
     <string name="concat_telefo_two_point">Telef.: %1$s</string>

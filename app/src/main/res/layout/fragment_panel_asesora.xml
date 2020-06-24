@@ -86,13 +86,13 @@
                         android:id="@+id/tvSaldoAsesora"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="Saldo: USD250"/>
+                        tools:text="Saldo: Bs.250"/>
 
                     <TextView
                         android:id="@+id/tvCupoAsesora"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="Cupo crédito: USD0"/>
+                        tools:text="Cupo crédito: Bs.0"/>
 
 
                 </LinearLayout>
