@@ -145,28 +145,19 @@ public class DatosContactoFragment extends BaseFragment implements View.OnClickL
     private boolean validateContacto(){
         Validate valid=new Validate();
         //contacto
-       // if ( model.getCelular()!= "0" && (!model.getCelular().isEmpty() && model.getCelular().length() < 10))
-        if ( model.getCelular()== "0" || model.getCelular().isEmpty())
-        {
-            msgToast("Teléfono movil requerido... Verifique");
-            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtCellphone);
-            return false;
-        }
-
-        if ( model.getTelefono()== "0" || model.getTelefono().isEmpty())
-        {
-            msgToast("Teléfono Fijo requerido... Verifique");
-            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtPhone);
-            return false;
-        }
-
-        if( (model.getTelefono().isEmpty() && model.getCelular().isEmpty()) || (model.getTelefono() == "0"  && model.getCelular()== "0") )
+        boolean celularInvalido= model.getCelular().isEmpty() || model.getCelular().length()<8;
+        boolean telefonoInvalido= model.getTelefono().isEmpty() || model.getTelefono().length()<6;
+        if ( celularInvalido && telefonoInvalido)
         {
             msgToast("Debe diligenciar por lo menos uno de los teléfonos.");
             valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtPhone);
             valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtCellphone);
             return false;
         }
+
+
+
+
 
         return true;
     }
@@ -178,12 +169,12 @@ public class DatosContactoFragment extends BaseFragment implements View.OnClickL
         }
 
         if(TextUtils.isEmpty(model.getCedula_adverso())){
-            msgToast("Cédula adverso... Verifique");
+            msgToast("Cédula reverso... Verifique");
             return false;
         }
 
         if(TextUtils.isEmpty(model.getPagare_frontal())){
-            msgToast("pagaré frontal... Verifique");
+            msgToast("Contrato... Verifique");
             return false;
         }
 

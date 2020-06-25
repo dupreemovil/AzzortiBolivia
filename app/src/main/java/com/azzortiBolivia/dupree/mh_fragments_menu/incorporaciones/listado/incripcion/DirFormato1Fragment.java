@@ -233,13 +233,29 @@ public class DirFormato1Fragment extends BaseFragment implements View.OnClickLis
 
         if (model.getEmpr_cony().toUpperCase().equals("Otro".toUpperCase()))
         {
-            if(model.getComplemento().isEmpty()){
-                msgToast("Dir. Res. > Datos adicionales...");
-                valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtComplemento);
-                return false;
-            }
+
         }
 
+        if(model.getComplemento().isEmpty()){
+            msgToast("Dir. Res. > Direc. esta vacia ...");
+            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtComplemento);
+            return false;
+        }
+        if(model.getNumero1().isEmpty()){
+            msgToast("Dir. Res. > Numero esta vacio ...");
+            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtNumeroDireccion);
+            return false;
+        }
+        if(model.getNomb_vere().isEmpty()){
+            msgToast("Dir. Res. > Interseccion  esta vacia ...");
+            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtTipoVia);
+            return false;
+        }
+        if(model.getEmpr_cony().isEmpty()){
+            msgToast("Dir. Res. > Interseccion  esta vacia ...");
+            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtReferencia);
+            return false;
+        }
         //departamento
         if (model.getDepartamento().isEmpty())
         {
