@@ -74,7 +74,7 @@ public class ReportesFragment extends BaseFragment implements ReportesHolder.Eve
     private List<ModelList> getListReportes(){
         List<ModelList> list = new ArrayList<>();
         list.add(new ModelList(R.drawable.ic_restore_white_24dp, getString(R.string.canjes_y_devoluciones_cdr)));
-        list.add(new ModelList(R.drawable.ic_record_voice_over_white_24dp, getString(R.string.seguimiento_servicios)));
+        //list.add(new ModelList(R.drawable.ic_record_voice_over_white_24dp, getString(R.string.seguimiento_servicios)));
         list.add(new ModelList(R.drawable.ic_description_white_24dp, getString(R.string.detalle_factura_pdf)));
         list.add(new ModelList(R.drawable.ic_check_white_24dp, getString(R.string.pagos_realizados)));
         if(!dataStore.getTipoPerfil().getPerfil().equals(Profile.ADESORA)) {
