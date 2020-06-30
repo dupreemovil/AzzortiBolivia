@@ -139,7 +139,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 navigationView.getMenu().findItem(R.id.menu_lat_pedidos_ret).setVisible(false);
                 navigationView.getMenu().findItem(R.id.menu_lat_edo_pedido).setVisible(false);
 
-                navigationView.getMenu().findItem(R.id.servicios).setVisible(true);
+                navigationView.getMenu().findItem(R.id.servicios).setVisible(false);
 
                onNavigationItemSelected(navigationView.getMenu().findItem(R.id.menu_lat_home_asesoras));
 
