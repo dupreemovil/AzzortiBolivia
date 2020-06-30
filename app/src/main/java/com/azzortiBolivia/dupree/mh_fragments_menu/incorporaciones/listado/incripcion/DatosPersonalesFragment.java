@@ -337,6 +337,14 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
             msgToast("Debe validar la cédula del referido... Verifique");
             valid.setLoginError(getString(R.string.deba_validar),binding.txtIdentyCardRef);
             return false;
+        } else if (model.getLetra3().isEmpty()) {
+            msgToast("Debe digitar un sector un sector ...");
+            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtSector);
+            return false;
+        } else if (model.getLetra1().isEmpty()) {
+            msgToast("Seleccione una Extencion para el CI...");
+            valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtCIExtension);
+            return false;
         } else if (model.getNacimiento().isEmpty()) {
             msgToast("Seleccione fecha de nacimiento...");
             valid.setLoginError(getResources().getString(R.string.campo_requerido), binding.txtDateBird);

@@ -128,7 +128,7 @@ public class Incorp_ListPre_Fragment extends BaseFragment implements ListPreHold
                 //si es gerente de zona, el etado es pendiente y fue realizada por una LIDER, la Z debe aprobar.
             } else if(dataRow.getEstado().equals(EnumStatusPreInsc.PENDIENTE.getKey())
                     && perfil.getPerfil().equals(Profile.GERENTE_ZONA) && dataRow.getUsuario().equals(Profile.LIDER)){
-
+                formato_direccion = dataRow.getFormato_direccion();
                 testPreInscription(nameSelected, row,dataRow.getEstado());
             }else if(dataRow.getEstado().equals(EnumStatusPreInsc.RECHAZADO.getKey())) {
                 formato_direccion = dataRow.getFormato_direccion();

@@ -39,7 +39,7 @@ public class ReportesActivity extends BaseActivity {
             if(data.getId() == EnumReportes.REPORTE_CDR.getKey()){
                 actionBar.setTitle(getString(R.string.canjes_y_devoluciones_cdr));
                 replaceFragmentWithBackStack(ReporteCDRFragment.class, false, bundle);
-         /*   } else if(data.getId() == EnumReportes.REPORTE_SEGUIMIENTO.getKey()){
+            /*} else if(data.getId() == EnumReportes.REPORTE_SEGUIMIENTO.getKey()){
                 actionBar.setTitle(getString(R.string.seguimiento_servicios));
                 replaceFragmentWithBackStack(ReporteSegPetQueRecFragment.class, false, bundle);*/
             } else if(data.getId() == EnumReportes.REPORTE_FACTURAS.getKey()){
