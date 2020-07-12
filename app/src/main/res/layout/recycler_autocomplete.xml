@@ -21,7 +21,7 @@
             android:layout_marginBottom="16dp"
             android:background="@color/white">
             <EditText
-                android:enabled="false"
+                android:enabled="true"
                 android:id="@+id/txtFilter"
                 android:layout_width="match_parent"
                 android:paddingLeft="8dp"
