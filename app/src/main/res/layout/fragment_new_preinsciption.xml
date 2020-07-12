@@ -126,9 +126,8 @@
                             android:layout_marginTop="8dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number"
+                            android:inputType="textCapCharacters"
                             android:text=""
-                            android:digits="@string/only_number_basic"
                             android:hint="@string/cedula"/>
                     </android.support.design.widget.TextInputLayout>
 
