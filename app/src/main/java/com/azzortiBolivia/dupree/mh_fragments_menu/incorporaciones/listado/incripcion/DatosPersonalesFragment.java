@@ -163,6 +163,7 @@ public class DatosPersonalesFragment extends BaseFragment implements View.OnClic
 
         listDirSend = jsonFile.getParentezcos(ManagerFiles.DIR_SEND.getKey());
         listP = Arrays.asList(getResources().getStringArray(R.array.parentescoOptions));
+
         listCIExtension=getExtensions();
         listSexo=getSexs();
         if(isOnCreate){

@@ -101,123 +101,123 @@
 
     <array name="array_parentesco">
         <item>
-            <id>0</id>
+            <id>1</id>
             <name>ABUELO</name>
         </item>
         <item>
-            <id>1</id>
+            <id>2</id>
             <name>AHIJADO</name>
         </item>
         <item>
-            <id>2</id>
+            <id>3</id>
             <name>AMIGO</name>
         </item>
         <item>
-            <id>3</id>
+            <id>4</id>
             <name>COMADRE</name>
         </item>
         <item>
-            <id>4</id>
+            <id>5</id>
             <name>COMPADRE</name>
         </item>
         <item>
-            <id>5</id>
+            <id>6</id>
             <name>COMPAÑERO</name>
         </item>
         <item>
-            <id>6</id>
+            <id>7</id>
             <name>CONCUÑADO</name>
         </item>
         <item>
-            <id>7</id>
+            <id>8</id>
             <name>CONSUEGRA</name>
         </item>
         <item>
-            <id>8</id>
+            <id>9</id>
             <name>CONYUGE</name>
         </item>
         <item>
-            <id>9</id>
+            <id>10</id>
             <name>CUÑADO</name>
         </item>
         <item>
-            <id>10</id>
+            <id>11</id>
             <name>ESPOSA</name>
         </item>
         <item>
-            <id>11</id>
+            <id>12</id>
             <name>ESPOSO</name>
         </item>
         <item>
-            <id>12</id>
+            <id>13</id>
             <name>EX-ESPOSO</name>
         </item>
         <item>
-            <id>13</id>
+            <id>14</id>
             <name>HERMANO</name>
         </item>
         <item>
-            <id>14</id>
+            <id>15</id>
             <name>HIJO</name>
         </item>
         <item>
-            <id>15</id>
+            <id>16</id>
             <name>MADRASTRA</name>
         </item>
         <item>
-            <id>16</id>
+            <id>17</id>
             <name>MADRE</name>
         </item>
         <item>
-            <id>17</id>
+            <id>18</id>
             <name>MADRINA</name>
         </item>
         <item>
-            <id>18</id>
+            <id>19</id>
             <name>NIETO</name>
         </item>
         <item>
-            <id>19</id>
+            <id>20</id>
             <name>NOVIO</name>
         </item>
         <item>
-            <id>20</id>
+            <id>21</id>
             <name>NUERA</name>
         </item>
         <item>
-            <id>21</id>
+            <id>22</id>
             <name>PADRASTRO</name>
         </item>
         <item>
-            <id>22</id>
+            <id>23</id>
             <name>PADRE</name>
         </item>
         <item>
-            <id>23</id>
+            <id>24</id>
             <name>PADRINO</name>
         </item>
         <item>
-            <id>24</id>
+            <id>25</id>
             <name>PRIMO</name>
         </item>
         <item>
-            <id>25</id>
+            <id>26</id>
             <name>SOBRINO</name>
         </item>
         <item>
-            <id>26</id>
+            <id>27</id>
             <name>SUEGRO</name>
         </item>
         <item>
-            <id>27</id>
+            <id>28</id>
             <name>TIA</name>
         </item>
         <item>
-            <id>28</id>
+            <id>29</id>
             <name>TIO</name>
         </item>
         <item>
-            <id>29</id>
+            <id>30</id>
             <name>YERNO</name>
         </item>
     </array>

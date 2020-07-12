@@ -1,123 +1,123 @@
 {
   "parentezcos": [
     {
-      "id": 0,
+      "id": 1,
       "name": "ABUELO"
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "AHIJADO"
     },
     {
-      "id": 2,
+      "id": 3,
       "name": "AMIGO"
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "COMADRE"
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "COMPADRE"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "COMPAÑERO"
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "CONCUÑADO"
     },
     {
-      "id": 7,
+      "id": 8,
       "name": "CONSUEGRA"
     },
     {
-      "id": 8,
+      "id": 9,
       "name": "CONYUGE"
     },
     {
-      "id": 9,
+      "id": 10,
       "name": "CUÑADO"
     },
     {
-      "id": 10,
+      "id": 11,
       "name": "ESPOSA"
     },
     {
-      "id": 11,
+      "id": 12,
       "name": "ESPOSO"
     },
     {
-      "id": 12,
+      "id": 13,
       "name": "EX-ESPOSO"
     },
     {
-      "id": 13,
+      "id": 14,
       "name": "HERMANO"
     },
     {
-      "id": 14,
+      "id": 15,
       "name": "HIJO"
     },
     {
-      "id": 15,
+      "id": 16,
       "name": "MADRASTRA"
     },
     {
-      "id": 16,
+      "id": 17,
       "name": "MADRE"
     },
     {
-      "id": 17,
+      "id": 18,
       "name": "MADRINA"
     },
     {
-      "id": 18,
+      "id": 19,
       "name": "NIETO"
     },
     {
-      "id": 19,
+      "id": 20,
       "name": "NOVIO"
     },
     {
-      "id": 20,
+      "id": 21,
       "name": "NUERA"
     },
     {
-      "id": 21,
+      "id": 22,
       "name": "PADRASTRO"
     },
     {
-      "id": 22,
+      "id": 23,
       "name": "PADRE"
     },
     {
-      "id": 23,
+      "id": 24,
       "name": "PADRINO"
     },
     {
-      "id": 24,
+      "id": 25,
       "name": "PRIMO"
     },
     {
-      "id": 25,
+      "id": 26,
       "name": "SOBRINO"
     },
     {
-      "id": 26,
+      "id": 27,
       "name": "SUEGRO"
     },
     {
-      "id": 27,
+      "id": 28,
       "name": "TIA"
     },
     {
-      "id": 28,
+      "id": 29,
       "name": "TIO"
     },
     {
-      "id": 29,
+      "id": 30,
       "name": "YERNO"
     }
   ]
