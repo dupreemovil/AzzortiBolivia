@@ -20,7 +20,7 @@ public class Preinscripcion {
     private String observacion;
     private String celular;
     private String usuario;
-    private String formato_direccion = "";
+    private String formato_direccion = "1";//@@
 
 //    public Preinscripcion(String id_preinscripcion, String tipo, String cedula, String nombre, String apellido, String direccion, String id_ciudad, String name_ciudad, String barrio, String estado, String fecha, boolean indi_consulta, String observacion, String celular) {
 //        this.id_preinscripcion = id_preinscripcion;
