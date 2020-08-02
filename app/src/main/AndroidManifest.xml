@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.azzortiBolivia.dupree">
+    package="com.dupreeincabolnuevo.dupree">
 
     <!-- "com.dupree2.Dupre" -->
 
@@ -26,7 +26,7 @@
         android:required="true" />
 
     <application
-        android:name="com.azzortiBolivia.dupree.BaseAPP"
+        android:name="com.dupreeincabolnuevo.dupree.BaseAPP"
         android:allowBackup="true"
         android:icon="@drawable/logo_azzorti"
         android:label="@string/app_name"
@@ -35,12 +35,12 @@
         android:theme="@style/AppTheme">
 
         <!-- FIREBASE -->
-        <service android:name="com.azzortiBolivia.dupree.mh_firebase.MyFirebaseMessagingService">
+        <service android:name="com.dupreeincabolnuevo.dupree.mh_firebase.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.azzortiBolivia.dupree.mh_firebase.MyFirebaseInstanceIDService">
+        <service android:name="com.dupreeincabolnuevo.dupree.mh_firebase.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -80,32 +80,32 @@
         </provider>-->
 
         <activity
-            android:name="com.azzortiBolivia.dupree.MainActivity"
+            android:name="com.dupreeincabolnuevo.dupree.MainActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.azzortiBolivia.dupree.MenuActivity"
+            android:name="com.dupreeincabolnuevo.dupree.MenuActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_menu"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-        <activity android:name="com.azzortiBolivia.dupree.ImageZoomActivity" />
+        <activity android:name="com.dupreeincabolnuevo.dupree.ImageZoomActivity" />
         <activity
-            android:name="com.azzortiBolivia.dupree.mh_utilities.ImageZoomActivity_Scroll"
+            android:name="com.dupreeincabolnuevo.dupree.mh_utilities.ImageZoomActivity_Scroll"
             android:label="Imagen"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.azzortiBolivia.dupree.CatalogoViewerActivity"
+            android:name="com.dupreeincabolnuevo.dupree.CatalogoViewerActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.azzortiBolivia.dupree.mh_bar_scann.BarcodeCaptureActivity"
+            android:name="com.dupreeincabolnuevo.dupree.mh_bar_scann.BarcodeCaptureActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.azzortiBolivia.dupree.FullscreenActivity"
+            android:name="com.dupreeincabolnuevo.dupree.FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme">
@@ -115,15 +115,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.azzortiBolivia.dupree.PDFActivity"></activity>
+        <activity android:name="com.dupreeincabolnuevo.dupree.PDFActivity"></activity>
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="01afc6e213851731dcca8bc277b49b80fbb73dd6" />
 
-        <activity android:name="com.azzortiBolivia.dupree.mh_fragments_menu.incorporaciones.listado.incripcion.InscripcionActivity"></activity>
-        <activity android:name="com.azzortiBolivia.dupree.mh_fragments_menu.reportes.ReportesActivity" />
-        <activity android:name="com.azzortiBolivia.dupree.mh_fragments_menu.pedidos.historial.detalle_factura.DetalleFacturaActivity" />
+        <activity android:name="com.dupreeincabolnuevo.dupree.mh_fragments_menu.incorporaciones.listado.incripcion.InscripcionActivity"></activity>
+        <activity android:name="com.dupreeincabolnuevo.dupree.mh_fragments_menu.reportes.ReportesActivity" />
+        <activity android:name="com.dupreeincabolnuevo.dupree.mh_fragments_menu.pedidos.historial.detalle_factura.DetalleFacturaActivity" />
     </application>
 
 </manifest>

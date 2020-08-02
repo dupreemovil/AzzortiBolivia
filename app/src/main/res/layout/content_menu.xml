@@ -9,7 +9,7 @@
 
     app:layout_scrollFlags="scroll|enterAlways|snap"
 
-    tools:context="com.azzortiBolivia.dupree.MenuActivity"
+    tools:context="com.dupreeincabolnuevo.dupree.MenuActivity"
     tools:showIn="@layout/app_bar_menu">
 
     <FrameLayout

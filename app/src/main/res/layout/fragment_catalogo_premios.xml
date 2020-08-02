@@ -4,7 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/gray_2"
-        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.CatalogoPremiosFragment">
+        tools:context="com.dupreeincabolnuevo.dupree.mh_fragments_menu.CatalogoPremiosFragment">
 
         <LinearLayout
             android:orientation="vertical"
