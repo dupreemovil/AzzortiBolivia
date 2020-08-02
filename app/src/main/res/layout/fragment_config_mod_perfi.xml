@@ -4,7 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.ConfigModPerfilFragment">
+        tools:context="com.dupreeincabolnuevo.dupree.mh_fragments_menu.ConfigModPerfilFragment">
 
         <!-- TODO: Update blank fragment layout -->
         <ScrollView

@@ -38,7 +38,7 @@ public class WindowHelpers {
         if (!TextUtils.isEmpty(iso4217) && iso4217.equals("CAD")) {
             return Currency.getInstance(iso4217);
         }
-        return Currency.getInstance("USD");
+        return Currency.getInstance("Bs.");
     }
 
     private static String postFormat(final String value) {

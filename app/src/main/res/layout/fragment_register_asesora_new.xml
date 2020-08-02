@@ -5,7 +5,7 @@
     android:id="@+id/ctnRegister"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    tools:context="com.azzortiBolivia.dupree.mh_fragments_main.RegisterAsesoraFragment_NEW">
+    tools:context="com.dupreeincabolnuevo.dupree.mh_fragments_main.RegisterAsesoraFragment_NEW">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView

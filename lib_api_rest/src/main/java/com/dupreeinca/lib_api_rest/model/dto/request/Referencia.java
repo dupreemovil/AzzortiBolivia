@@ -37,6 +37,7 @@ public class Referencia extends BaseObservable {
         int parent1 = Integer.parseInt(
                 data.getParentesco().isEmpty() ? "0" : data.getParentesco()
         );
+        parent1--;
         setName_parentesco(parentescos.get(
                 parent1 < 0 ? 0 : parent1
         ));

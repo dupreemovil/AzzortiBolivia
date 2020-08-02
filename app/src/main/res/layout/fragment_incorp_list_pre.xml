@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.incorporaciones.listado.Incorp_ListPre_Fragment">
+        tools:context="com.dupreeincabolnuevo.dupree.mh_fragments_menu.incorporaciones.listado.Incorp_ListPre_Fragment">
 
         <LinearLayout
             android:orientation="vertical"

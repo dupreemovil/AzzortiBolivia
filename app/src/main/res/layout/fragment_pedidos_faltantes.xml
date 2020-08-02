@@ -7,7 +7,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.PedidosFaltantesFragment">
+        tools:context="com.dupreeincabolnuevo.dupree.mh_fragments_menu.PedidosFaltantesFragment">
 
         <LinearLayout
             android:orientation="vertical"

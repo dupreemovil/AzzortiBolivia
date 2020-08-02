@@ -4,7 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.incorporaciones.Incorp_Todos_Fragment">
+        tools:context="com.dupreeincabolnuevo.dupree.mh_fragments_menu.incorporaciones.Incorp_Todos_Fragment">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
@@ -36,7 +36,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <com.azzortiBolivia.dupree.mh_utilities.CustomViewPager_DisableSwipe
+                    <com.dupreeincabolnuevo.dupree.mh_utilities.CustomViewPager_DisableSwipe
                         android:id="@+id/pagerIncorp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

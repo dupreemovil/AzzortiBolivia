@@ -423,6 +423,7 @@ public class InscriptionDTO extends BaseObservable implements Parcelable {
         setImg_terminos(data.getImg_terminos());
         setNomb_terc(data.getNomb_terc());
         setApel_terc(data.getApel_terc());
+        setNombre( data.getNomb_terc().concat(" ").concat(data.getApel_terc()) );
 
 //        setFormato_direccion(data.getFormato_direccion());
     }

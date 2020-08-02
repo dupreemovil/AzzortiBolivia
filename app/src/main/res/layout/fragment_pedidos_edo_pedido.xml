@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        tools:context="com.azzortiBolivia.dupree.mh_fragments_menu.PedidosEdoPedidoFragment">
+        tools:context="com.dupreeincabolnuevo.dupree.mh_fragments_menu.PedidosEdoPedidoFragment">
 
         <LinearLayout
             android:orientation="vertical"
